@@ -27,9 +27,6 @@
     "multi_instance": true,
     "services": [
         "nginx"
-        // "php7.3-fpm",
-        // "nodejs",
-        // "mysql"
     ],
     "arguments": {
         "install": [
@@ -52,19 +49,6 @@
                 "type": "boolean",
                 "default": true
             },
-            // {
-            //     "name": "language",
-            //     "type": "string",
-            //     "ask": {
-            //         "en": "Choose the application language",
-            //         "fr": "Choisissez la langue de l'application"
-            //     },
-            //     "choices": [
-            //         "fr",
-            //         "en"
-            //     ],
-            //     "default": "fr"
-            // },
             {
                 "name": "password",
                 "type": "password",
