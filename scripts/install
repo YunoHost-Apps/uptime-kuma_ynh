@@ -79,24 +79,24 @@ ynh_app_setting_set --app=$app --key=admin --value=$admin
 #=================================================
 # FIND AND OPEN A PORT
 #=================================================
-ynh_script_progression --message="Finding an available port..." --time --weight=1
+# ynh_script_progression --message="Finding an available port..." --time --weight=1
 
 ### Use these lines if you have to open a port for the application
 ### `ynh_find_port` will find the first available port starting from the given port.
 ### If you're not using these lines:
 ###		- Remove the section "CLOSE A PORT" in the remove script
 
-# Find an available port
-port=$(ynh_find_port --port=3001)
-ynh_app_setting_set --app=$app --key=port --value=$port
+# # Find an available port
+# port=$(ynh_find_port --port=3001)
+# ynh_app_setting_set --app=$app --key=port --value=$port
 
-# Optional: Expose this port publicly
-# (N.B.: you only need to do this if the app actually needs to expose the port publicly.
-# If you do this and the app doesn't actually need you are CREATING SECURITY HOLES IN THE SERVER !)
+# # Optional: Expose this port publicly
+# # (N.B.: you only need to do this if the app actually needs to expose the port publicly.
+# # If you do this and the app doesn't actually need you are CREATING SECURITY HOLES IN THE SERVER !)
 
-# Open the port
-ynh_script_progression --message="Configuring firewall..." --time --weight=1
-ynh_exec_warn_less yunohost firewall allow --no-upnp TCP $port
+# # Open the port
+# ynh_script_progression --message="Configuring firewall..." --time --weight=1
+# ynh_exec_warn_less yunohost firewall allow --no-upnp TCP $port
 
 #=================================================
 # INSTALL DEPENDENCIES
