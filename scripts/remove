@@ -70,10 +70,10 @@ ynh_remove_nodejs
 #=================================================
 # REMOVE DEPENDENCIES
 #=================================================
-ynh_script_progression --message="Removing dependencies..." --time --weight=1
+# ynh_script_progression --message="Removing dependencies..." --time --weight=1
 
 # Remove metapackage and its dependencies
-ynh_remove_app_dependencies
+# ynh_remove_app_dependencies
 
 #=================================================
 # REMOVE APP MAIN DIR
