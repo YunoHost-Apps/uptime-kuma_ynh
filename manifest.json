@@ -34,8 +34,8 @@
                 "name": "domain",
                 "type": "domain",
                 "help": {
-                    "en": "Choose the domain where this app should be installed. This app requires a whole subdomain and doesn't support sub-paths.",
-                    "fr": "Choisissez un domaine. Cette app a besoin de tout un sous-domaine à elle toute seule."
+                    "en": "This app requires a whole subdomain and doesn't support sub-paths.",
+                    "fr": "Cette app a besoin de tout un sous-domaine à elle toute seule."
                 }
             },
             {
