@@ -8,7 +8,7 @@
 # pkg_dependencies="npm git nodejs"
 pkg_dependencies=""
 
-nodejs_version=14
+nodejs_version=14.18.1
 
 #=================================================
 # PERSONAL HELPERS
