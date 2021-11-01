@@ -310,7 +310,7 @@ ynh_permission_update --permission="main" --add="visitors"
 
 # Installation with curl
 # ynh_script_progression --message="Finalizing installation..." --time --weight=1
-ynh_local_curl "/" "key1=value1" "key2=value2" "key3=value3"
+# ynh_local_curl "/" "key1=value1" "key2=value2" "key3=value3"
 
 # Remove the public access
 ynh_permission_update --permission="main" --remove="visitors"
