@@ -1,10 +1,9 @@
 - Not working yet
 - Requires a full dedicated domain
-- Uses N to install specific nodejs version
 - ARM architecture not supported
 - No upgrade script in this package
-- does not properly use port reserved by yunohost
 - needs post-install
+- Uses N to install specific nodejs version
 <!-- * Any known limitations, constrains or stuff not working, such as (but not limited to):
     * requiring a full dedicated domain ?
     * architectures not supported ?

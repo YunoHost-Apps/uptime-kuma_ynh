@@ -7,7 +7,7 @@ Type=simple
 User=__APP__
 Group=__APP__
 WorkingDirectory=__FINALPATH__/
-ExecStart=/usr/local/n/versions/node/14.18.1/bin/node server/server.js 
+ExecStart=/usr/local/n/versions/node/14.18.1/bin/node server/server.js --port=__PORT__
 StandardOutput=append:/var/log/__APP__/__APP__.log
 StandardError=inherit
 
