@@ -1,5 +1,5 @@
 [Unit]
-Description=Small description of the service
+Description=Uptime Kuma
 After=network.target
 
 [Service]
@@ -7,7 +7,8 @@ Type=simple
 User=__APP__
 Group=__APP__
 WorkingDirectory=__FINALPATH__/
-ExecStart=__FINALPATH__/script
+ExecStart=pm2 start __FINALPATH__/server/server.js --name uptime-kuma 
+ExecStop=pm2 stop uptime-kuma 
 StandardOutput=append:/var/log/__APP__/__APP__.log
 StandardError=inherit
 

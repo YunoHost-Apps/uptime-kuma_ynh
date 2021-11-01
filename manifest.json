@@ -1,6 +1,6 @@
 {
-    "name": "Example app",
-    "id": "example",
+    "name": "Uptime Kuma",
+    "id": "uptime-kuma",
     "packaging_format": 1,
     "description": {
         "en": "Explain in *a few (10~15) words* the purpose of the app or what it actually does (it is meant to give a rough idea to users browsing a catalog of 100+ apps)",
@@ -26,12 +26,13 @@
     },
     "multi_instance": true,
     "services": [
-        "nginx",
-        "php7.3-fpm",
-        "mysql"
+        "nginx"
+        // "php7.3-fpm",
+        // "nodejs",
+        // "mysql"
     ],
     "arguments": {
-        "install" : [
+        "install": [
             {
                 "name": "domain",
                 "type": "domain"
@@ -51,16 +52,19 @@
                 "type": "boolean",
                 "default": true
             },
-            {
-                "name": "language",
-                "type": "string",
-                "ask": {
-                    "en": "Choose the application language",
-                    "fr": "Choisissez la langue de l'application"
-                },
-                "choices": ["fr", "en"],
-                "default": "fr"
-            },
+            // {
+            //     "name": "language",
+            //     "type": "string",
+            //     "ask": {
+            //         "en": "Choose the application language",
+            //         "fr": "Choisissez la langue de l'application"
+            //     },
+            //     "choices": [
+            //         "fr",
+            //         "en"
+            //     ],
+            //     "default": "fr"
+            // },
             {
                 "name": "password",
                 "type": "password",
