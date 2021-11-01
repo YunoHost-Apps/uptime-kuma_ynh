@@ -228,7 +228,7 @@ ynh_script_progression --message="Creating a data directory..." --time --weight=
 ###		- Remove the section "RESTORE THE DATA DIRECTORY" in the restore script
 ###     - As well as the section "REMOVE DATA DIR" in the remove script
 
-datadir=/home/yunohost.app/$app
+datadir=/home/yunohost.app/$app/data
 ynh_app_setting_set --app=$app --key=datadir --value=$datadir
 
 mkdir -p $datadir
