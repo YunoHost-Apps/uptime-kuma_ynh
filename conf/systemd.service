@@ -7,8 +7,7 @@ Type=simple
 User=__APP__
 Group=__APP__
 WorkingDirectory=__FINALPATH__/
-ExecStart=/usr/local/n/versions/node/14.18.1/bin/pm2 start server/server.js -- --port=__PORT__ --name uptime-kuma 
-ExecStop=/usr/local/n/versions/node/14.18.1/bin/pm2 stop uptime-kuma 
+ExecStart=/usr/local/n/versions/node/14.18.1/bin/node server/server.js 
 StandardOutput=append:/var/log/__APP__/__APP__.log
 StandardError=inherit
 

@@ -208,12 +208,10 @@ ynh_add_nginx_config
 #=================================================
 # SPECIFIC SETUP
 #=================================================
-ynh_script_progression --message="Installing Uptime Kuma..." --time --weight=3
-# Install pm2 (may be replaced by adequate systemd conf)
-ynh_exec_warn_less ynh_exec_as $app /usr/local/n/versions/node/14.18.1/bin/npm install pm2 -g
-# ynh_exec_warn_less ynh_exec_as $app $ynh_node_load_PATH $ynh_npm install pm2 -g
+ynh_script_progression --message="Installing Uptime Kuma npm dependencies..." --time --weight=5
 # ynh_exec_warn_less ynh_exec_as $app $ynh_node_load_PATH $ynh_npm install
 ynh_exec_warn_less ynh_exec_as $app /usr/local/n/versions/node/14.18.1/bin/npm install
+ynh_script_progression --message="Downloading Uptime Kuma frontend..." --time --weight=1
 ynh_exec_warn_less ynh_exec_as $app wget https://github.com/louislam/uptime-kuma/releases/download/1.10.0/dist.tar.gz
 ynh_exec_as $app tar -xvf dist.tar.gz $final_path
 
