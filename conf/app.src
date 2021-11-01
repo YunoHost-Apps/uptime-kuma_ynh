@@ -1,5 +1,5 @@
-SOURCE_URL=url of app's source
-SOURCE_SUM=sha256 b345072f426e52cda594a45a5096e6351ba5c42c3d4f8f4088a00c1c707cae7d
+SOURCE_URL=https://github.com/louislam/uptime-kuma/archive/refs/tags/1.10.0.tar.gz
+SOURCE_SUM=sha256sum b345072f426e52cda594a45a5096e6351ba5c42c3d4f8f4088a00c1c707cae7d
 SOURCE_SUM_PRG=b345072f426e52cda594a45a5096e6351ba5c42c3d4f8f4088a00c1c707cae7d
 SOURCE_FORMAT=tar.gz
 SOURCE_IN_SUBDIR=true
