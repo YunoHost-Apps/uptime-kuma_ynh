@@ -211,9 +211,9 @@ ynh_add_nginx_config
 ynh_script_progression --message="Installing Uptime Kuma..." --time --weight=3
 # Install pm2 (may be replaced by adequate systemd conf)
 ynh_exec_warn_less ynh_exec_as $app $ynh_node_load_PATH $ynh_npm install pm2 -g
-ynh_exec_warn_less ynh_exec_as $app $ynh_node_load_PATH $ynh_npm npm install
-wget https://github.com/louislam/uptime-kuma/releases/download/1.10.0/dist.tar.gz
-tar -xvf dist.tar.gz
+ynh_exec_warn_less ynh_exec_as $app $ynh_node_load_PATH $ynh_npm install
+ynh_exec_warn_less ynh_exec_as $app wget cd $final_path && https://github.com/louislam/uptime-kuma/releases/download/1.10.0/dist.tar.gz
+ynh_exec_as $app cd $final_path && tar -xvf dist.tar.gz
 
 #=================================================
 # CREATE DATA DIRECTORY
