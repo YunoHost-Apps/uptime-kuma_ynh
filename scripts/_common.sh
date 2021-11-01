@@ -5,7 +5,7 @@
 #=================================================
 
 # dependencies used by the app
-pkg_dependencies="npm git pm2"
+pkg_dependencies="npm git pm2 nodejs"
 
 #=================================================
 # PERSONAL HELPERS
