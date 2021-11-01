@@ -195,8 +195,9 @@ ynh_add_nginx_config
 #=================================================
 # SPECIFIC SETUP
 #=================================================
-# ...
+# Install pm2 (may be replaced by adequate systemd conf)
 #=================================================
+npm install pm2 -g
 
 #=================================================
 # CREATE DATA DIRECTORY
