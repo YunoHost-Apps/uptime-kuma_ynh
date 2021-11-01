@@ -1,8 +1,9 @@
-- Not working yet
 - Requires a full dedicated domain
 - ARM architecture not supported
+- This app needs a manual post-install
 - No upgrade script in this package
-- needs post-install
+- No restore script in this package
+- Backup script is untested in this package
 - Uses N to install specific nodejs version
 <!-- * Any known limitations, constrains or stuff not working, such as (but not limited to):
     * requiring a full dedicated domain ?

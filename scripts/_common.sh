@@ -6,7 +6,7 @@
 
 # dependencies used by the app
 # pkg_dependencies="npm git nodejs"
-pkg_dependencies=""
+# pkg_dependencies=""
 
 nodejs_version=14.18.1
 

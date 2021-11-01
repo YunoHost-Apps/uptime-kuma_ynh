@@ -26,10 +26,10 @@ ynh_abort_if_errors
 
 path_url=/
 domain=$YNH_APP_ARG_DOMAIN
-admin=$YNH_APP_ARG_ADMIN
+# admin=$YNH_APP_ARG_ADMIN
 is_public=$YNH_APP_ARG_IS_PUBLIC
-language=$YNH_APP_ARG_LANGUAGE
-password=$YNH_APP_ARG_PASSWORD
+# language=$YNH_APP_ARG_LANGUAGE
+# password=$YNH_APP_ARG_PASSWORD
 
 ### If it's a multi-instance app, meaning it can be installed several times independently
 ### The id of the app as stated in the manifest is available as $YNH_APP_ID
@@ -72,9 +72,9 @@ ynh_script_progression --message="Storing installation settings..." --time --wei
 # Subpath not supported
 ynh_app_setting_set --app=$app --key=path --value=/
 ynh_app_setting_set --app=$app --key=domain --value=$domain
-ynh_app_setting_set --app=$app --key=admin --value=$admin
-ynh_app_setting_set --app=$app --key=password --value=$password
-ynh_app_setting_set --app=$app --key=language --value=$language
+# ynh_app_setting_set --app=$app --key=admin --value=$admin
+# ynh_app_setting_set --app=$app --key=password --value=$password
+# ynh_app_setting_set --app=$app --key=language --value=$language
 
 #=================================================
 # STANDARD MODIFICATIONS
@@ -212,7 +212,7 @@ ynh_add_nginx_config
 #=================================================
 ynh_script_progression --message="Installing Uptime Kuma npm dependencies..." --time --weight=5
 # ynh_exec_warn_less ynh_exec_as $app $ynh_npm install
-cd $final_path && $ynh_npm install
+ynh_exec_warn_less cd $final_path && $ynh_npm install
 # cd $final_path && /usr/local/n/versions/node/14.18.1/bin/npm install
 ynh_script_progression --message="Downloading Uptime Kuma frontend..." --time --weight=1
 ynh_exec_warn_less wget https://github.com/louislam/uptime-kuma/releases/download/1.10.0/dist.tar.gz
@@ -301,22 +301,19 @@ ynh_add_systemd_config
 # SETUP APPLICATION WITH CURL
 #=================================================
 
-### Use these lines only if the app installation needs to be finalized through
-### web forms. We generally don't want to ask the final user,
-### so we're going to use curl to automatically fill the fields and submit the
-### forms.
+### We cannot use it since this app uses websocket exclusively.
 
-# Set the app as temporarily public for curl call
-ynh_script_progression --message="Configuring SSOwat..." --time --weight=1
-# Making the app public for curl
-ynh_permission_update --permission="main" --add="visitors"
+# # Set the app as temporarily public for curl call
+# ynh_script_progression --message="Configuring SSOwat..." --time --weight=1
+# # Making the app public for curl
+# ynh_permission_update --permission="main" --add="visitors"
 
-# Installation with curl
+# # Installation with curl
 # ynh_script_progression --message="Finalizing installation..." --time --weight=1
 # ynh_local_curl "/" "key1=value1" "key2=value2" "key3=value3"
 
-# Remove the public access
-ynh_permission_update --permission="main" --remove="visitors"
+# # Remove the public access
+# ynh_permission_update --permission="main" --remove="visitors"
 
 #=================================================
 # GENERIC FINALIZATION
@@ -409,7 +406,7 @@ fi
 ### does have for example an admin interface or an API.
 
 # Only the admin can access the admin panel of the app (if the app has an admin panel)
-ynh_permission_create --permission="admin" --url="/admin" --allowed=$admin
+# ynh_permission_create --permission="admin" --url="/admin" --allowed=$admin
 
 # Everyone can access the API part
 # We don't want to display the tile in the SSO so we put --show_tile="false"

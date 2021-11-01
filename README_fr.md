@@ -35,13 +35,13 @@ It is a self-hosted monitoring tool like "Uptime Robot".
 
 ## Avertissements / informations importantes
 
-- Not working yet
 - Requires a full dedicated domain
-- Uses N to install specific nodejs version
 - ARM architecture not supported
+- This app needs a manual post-install
 - No upgrade script in this package
-- does not properly use port reserved by yunohost
-- needs post-install
+- No restore script in this package
+- Backup script is untested in this package
+- Uses N to install specific nodejs version
 <!-- * Any known limitations, constrains or stuff not working, such as (but not limited to):
     * requiring a full dedicated domain ?
     * architectures not supported ?
