@@ -61,6 +61,13 @@ ynh_remove_logrotate
 # ynh_mysql_remove_db --db_user=$db_user --db_name=$db_name
 
 #=================================================
+# REMOVE NODEJS
+#=================================================
+ynh_script_progression --message="Removing nodejs version..." --time --weight=1
+
+ynh_remove_nodejs
+
+#=================================================
 # REMOVE DEPENDENCIES
 #=================================================
 ynh_script_progression --message="Removing dependencies..." --time --weight=1
