@@ -34,7 +34,7 @@
                 "name": "domain",
                 "type": "domain",
                 "help": {
-                    "en": "This app requires a whole subdomain and doesn't support sub-paths.",
+                    "en": "This app requires a whole subdomain",
                     "fr": "Cette app a besoin de tout un sous-domaine à elle toute seule."
                 }
             },
