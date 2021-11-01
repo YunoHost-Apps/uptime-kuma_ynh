@@ -37,8 +37,8 @@
             {
                 "name": "path",
                 "type": "path",
-                "example": "/uptime-kuma",
-                "default": "/uptime-kuma"
+                "example": "/",
+                "default": "/"
             },
             {
                 "name": "admin",
