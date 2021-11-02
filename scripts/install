@@ -166,7 +166,9 @@ ynh_script_progression --message="Setting up source files..." --time --weight=1
 
 ynh_app_setting_set --app=$app --key=final_path --value=$final_path
 # Download, check integrity, uncompress and patch the source from app.src
-ynh_setup_source --dest_dir="$final_path"
+ynh_setup_source --dest_dir="$final_path" --keep=data/
+# Download, check integrity, uncompress and patch the source from dist.src
+ynh_setup_source --source_id="dist" --dest_dir="$final_path/dist"
 
 # FIXME: this should be managed by the core in the future
 # Here, as a packager, you may have to tweak the ownerhsip/permissions
@@ -212,9 +214,6 @@ ynh_add_nginx_config
 #=================================================
 ynh_script_progression --message="Installing Uptime Kuma dependencies..." --time --weight=7
 cd $final_path && ynh_exec_warn_less $ynh_npm install
-ynh_script_progression --message="Downloading Uptime Kuma frontend..." --time --weight=1
-ynh_exec_warn_less wget https://github.com/louislam/uptime-kuma/releases/download/1.10.0/dist.tar.gz
-ynh_exec_as $app tar -xvf dist.tar.gz --directory=$final_path
 
 #=================================================
 # CREATE DATA DIRECTORY
