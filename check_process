@@ -17,7 +17,7 @@
 		setup_private=1
 		setup_public=1
 		upgrade=1
-		upgrade=1	from_commit=20c58daa4be910e554058914633f9a94500bc7e1
+		upgrade=1	from_commit=2e870313227801603a41fd3bfcaafa912dce6d0a
 		backup_restore=1
 		multi_instance=1
 		port_already_use=0
@@ -26,6 +26,6 @@
 Email=
 Notification=none
 ;;; Upgrade options
-	; commit=20c58daa4be910e554058914633f9a94500bc7e1
-		name="Merge pull request #1 from YunoHost-Apps/helper-in-service"
+	; commit=2e870313227801603a41fd3bfcaafa912dce6d0a
+		name="fix restore.."
 		manifest_arg=domain=domain.td&path=/&is_public=1&port=666&
