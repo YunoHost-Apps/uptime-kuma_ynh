@@ -118,7 +118,7 @@ chown -R $app:www-data "$final_path"
 #=================================================
 # INSTALL NODEJS
 #=================================================
-ynh_script_progression --message="Upgrading NodeJS..." --weight=2
+ynh_script_progression --message="Upgrading nodejs..." --weight=2
 
 ynh_install_nodejs --nodejs_version=$nodejs_version
 

@@ -118,7 +118,7 @@ ynh_app_setting_set --app=$app --key=port --value=$port
 #=================================================
 # INSTALL NODEJS
 #=================================================
-ynh_script_progression --message="Installing NodeJS..." --weight=2
+ynh_script_progression --message="Installing nodejs..." --weight=2
 
 ynh_install_nodejs --nodejs_version=$nodejs_version
 
@@ -218,7 +218,7 @@ cd $final_path && ynh_exec_warn_less $ynh_npm install
 #=================================================
 # CREATE DATA DIRECTORY
 #=================================================
-ynh_script_progression --message="Creating a data directory..." --weight=1
+# ynh_script_progression --message="Creating a data directory..." --weight=1
 
 ### Use these lines if you need to create a directory to store "persistent files" for the application.
 ### Usually this directory is used to store uploaded files or any file that won't be updated during 
@@ -228,20 +228,20 @@ ynh_script_progression --message="Creating a data directory..." --weight=1
 ###		- Remove the section "RESTORE THE DATA DIRECTORY" in the restore script
 ###     - As well as the section "REMOVE DATA DIR" in the remove script
 
-datadir=/home/yunohost.app/$app/data
-ynh_app_setting_set --app=$app --key=datadir --value=$datadir
+# datadir=/home/yunohost.app/$app/data
+# ynh_app_setting_set --app=$app --key=datadir --value=$datadir
 
-mkdir -p $datadir
+# mkdir -p $datadir
 
-# FIXME: this should be managed by the core in the future
-# Here, as a packager, you may have to tweak the ownerhsip/permissions
-# such that the appropriate users (e.g. maybe www-data) can access
-# files in some cases.
-# But FOR THE LOVE OF GOD, do not allow r/x for "others" on the entire folder -
-# this will be treated as a security issue.
-chmod 750 "$datadir"
-chmod -R o-rwx "$datadir"
-chown -R $app:www-data "$datadir"
+# # FIXME: this should be managed by the core in the future
+# # Here, as a packager, you may have to tweak the ownerhsip/permissions
+# # such that the appropriate users (e.g. maybe www-data) can access
+# # files in some cases.
+# # But FOR THE LOVE OF GOD, do not allow r/x for "others" on the entire folder -
+# # this will be treated as a security issue.
+# chmod 750 "$datadir"
+# chmod -R o-rwx "$datadir"
+# chown -R $app:www-data "$datadir"
 
 #=================================================
 # ADD A CONFIGURATION
