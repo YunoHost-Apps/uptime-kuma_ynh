@@ -304,7 +304,7 @@ ynh_add_systemd_config
 ### We could write to its SQLite. Didn't find where the language preferences are though.
 
 # password_hashed = $(htpasswd -bnBC 10 "" $password | tr -d ':\n')
-# sqlite3 $final_path/db/kuma.db <<EOF
+# sqlite3 $final_path/data/kuma.db <<EOF
 # INSERT INTO "main"."user" ("id", "username", "password", "active", "timezone", "twofa_secret", "twofa_status", "twofa_last_token") VALUES ('1', '$admin', '$password_hashed', '1', '', '', '0', '');
 # EOF
 
