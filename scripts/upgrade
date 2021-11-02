@@ -20,6 +20,7 @@ domain=$(ynh_app_setting_get --app=$app --key=domain)
 path_url=$(ynh_app_setting_get --app=$app --key=path)
 # admin=$(ynh_app_setting_get --app=$app --key=admin)
 final_path=$(ynh_app_setting_get --app=$app --key=final_path)
+port=$(ynh_app_setting_get --app=$app --key=port)
 # language=$(ynh_app_setting_get --app=$app --key=language)
 # db_name=$(ynh_app_setting_get --app=$app --key=db_name)
 
@@ -115,14 +116,6 @@ chmod -R o-rwx "$final_path"
 chown -R $app:www-data "$final_path"
 
 #=================================================
-# NGINX CONFIGURATION
-#=================================================
-ynh_script_progression --message="Upgrading NGINX web server configuration..." --weight=1
-
-# Create a dedicated NGINX config
-ynh_add_nginx_config
-
-#=================================================
 # INSTALL NODEJS
 #=================================================
 ynh_script_progression --message="Upgrading NodeJS..." --weight=2
@@ -134,6 +127,14 @@ ynh_install_nodejs --nodejs_version=$nodejs_version
 #=================================================
 
 ynh_use_nodejs
+
+#=================================================
+# NGINX CONFIGURATION
+#=================================================
+ynh_script_progression --message="Upgrading NGINX web server configuration..." --weight=1
+
+# Create a dedicated NGINX config
+ynh_add_nginx_config
 
 #=================================================
 # UPGRADE DEPENDENCIES
