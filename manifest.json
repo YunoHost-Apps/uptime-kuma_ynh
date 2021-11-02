@@ -9,14 +9,14 @@
     "version": "1.0~ynh1",
     "url": "https://github.com/louislam/uptime-kuma/",
     "upstream": {
-        "license": "free",
+        "license": "MIT",
         "website": "https://uptime.kuma.pet/",
         "demo": "https://demo.uptime.kuma.pet",
         "admindoc": "https://github.com/louislam/uptime-kuma/wiki",
         "userdoc": "https://github.com/louislam/uptime-kuma/wiki",
         "code": "https://github.com/louislam/uptime-kuma/"
     },
-    "license": "free",
+    "license": "AGPL-3.0-or-later",
     "maintainer": {
         "name": "Hadrien",
         "email": "ketsapiwiq@protonmail.com"
