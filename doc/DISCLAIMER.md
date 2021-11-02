@@ -3,4 +3,4 @@
 - ARM architecture not supported
 - This app needs a manual post-install
 - Uses N to install specific nodejs version
-- We could pre-configure mail notifications with YunoHost mail server as an improvement.
+- We could pre-configure mail notifications with YunoHost mail server as an improvement. See comments in file to try to do it with Curl and WebSockets or Sqlite.
