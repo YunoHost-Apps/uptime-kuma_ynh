@@ -170,8 +170,6 @@ ynh_restore_file --origin_path="/etc/logrotate.d/$app"
 #=================================================
 ynh_script_progression --message="Integrating service in YunoHost..." --weight=1
 
-mkdir /var/log/$app/
-
 yunohost service add $app --description="Uptime Kuma, a fancy monitoring tool" --log="/var/log/$app/$app.log"
 
 #=================================================
