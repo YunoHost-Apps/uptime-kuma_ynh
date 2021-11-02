@@ -295,22 +295,20 @@ ynh_script_progression --message="Configuring a systemd service..." --time --wei
 ynh_add_systemd_config
 
 #=================================================
-# SETUP APPLICATION WITH CURL
+# SETUP APPLICATION
 #=================================================
 
-### We cannot use it since this app uses websocket exclusively.
+### It could be tricky to use CURL since this app uses websocket exclusively.
+# curl --data-binary '{"jsonrpc": "2.0", "method": "VideoLibrary.Scan", "id": "1"}' -H "Upgrade:websocket" -H 'content-type: application/json;' http://localhost:9090/jsonrpc
 
-# # Set the app as temporarily public for curl call
-# ynh_script_progression --message="Configuring SSOwat..." --time --weight=1
-# # Making the app public for curl
-# ynh_permission_update --permission="main" --add="visitors"
+### We could write to its SQLite. Didn't find where the language preferences are though.
 
-# # Installation with curl
-# ynh_script_progression --message="Finalizing installation..." --time --weight=1
-# ynh_local_curl "/" "key1=value1" "key2=value2" "key3=value3"
+# password_hashed = $(htpasswd -bnBC 10 "" $password | tr -d ':\n')
+# sqlite3 $final_path/db/kuma.db <<EOF
+# INSERT INTO "main"."user" ("id", "username", "password", "active", "timezone", "twofa_secret", "twofa_status", "twofa_last_token") VALUES ('1', '$admin', '$password_hashed', '1', '', '', '0', '');
+# EOF
 
-# # Remove the public access
-# ynh_permission_update --permission="main" --remove="visitors"
+### We could pre-configure mail notifications.
 
 #=================================================
 # GENERIC FINALIZATION

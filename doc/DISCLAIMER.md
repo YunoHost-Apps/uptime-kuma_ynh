@@ -1,10 +1,8 @@
 - Requires a full dedicated domain
 - ARM architecture not supported
 - This app needs a manual post-install
-- No upgrade script in this package
-- No restore script in this package
-- Backup script is untested in this package
 - Uses N to install specific nodejs version
+- We could pre-configure mail notifications with YunoHost mail server as an improvement.
 <!-- * Any known limitations, constrains or stuff not working, such as (but not limited to):
     * requiring a full dedicated domain ?
     * architectures not supported ?
