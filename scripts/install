@@ -301,6 +301,10 @@ ynh_add_systemd_config
 ### It could be tricky to use CURL since this app uses websocket exclusively.
 # curl --data-binary '{"jsonrpc": "2.0", "method": "VideoLibrary.Scan", "id": "1"}' -H "Upgrade:websocket" -H 'content-type: application/json;' http://localhost:9090/jsonrpc
 
+# curl 'wss://uptime-kuma.example.fr/socket.io/?EIO=4&transport=websocket' -H 'Accept: */*' -H 'Sec-WebSocket-Version: 13' -H 'Origin: https://uptime-kuma.example.fr' -H 'Sec-WebSocket-Extensions: permessage-deflate' -H 'Sec-WebSocket-Key: ZziEpfBMcnRSyFryHHsVmA==' -H 'Connection: keep-alive, Upgrade' -H 'Sec-Fetch-Dest: websocket' -H 'Sec-Fetch-Mode: websocket' -H 'Sec-Fetch-Site: same-origin' -H 'Pragma: no-cache' -H 'Cache-Control: no-cache' -H 'Upgrade: websocket' --data-binary '["setup","admin","password"]' -H 'content-type: application/json;'
+
+# 421["setup","admin","password"]
+
 ### We could write to its SQLite. Didn't find where the language preferences are though.
 
 # password_hashed = $(htpasswd -bnBC 10 "" $password | tr -d ':\n')
