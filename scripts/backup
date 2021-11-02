@@ -32,7 +32,7 @@ final_path=$(ynh_app_setting_get --app=$app --key=final_path)
 domain=$(ynh_app_setting_get --app=$app --key=domain)
 # db_name=$(ynh_app_setting_get --app=$app --key=db_name)
 # phpversion=$(ynh_app_setting_get --app=$app --key=phpversion)
-datadir=$(ynh_app_setting_get --app=$app --key=datadir)
+# datadir=$(ynh_app_setting_get --app=$app --key=datadir)
 
 #=================================================
 # DECLARE DATA AND CONF FILES TO BACKUP
@@ -48,13 +48,13 @@ ynh_print_info --message="Declaring files to be backed up..."
 # BACKUP THE APP MAIN DIR
 #=================================================
 
-ynh_backup --src_path="$final_path"
+ynh_backup --src_path="$final_path" --is_big
 
 #=================================================
 # BACKUP THE DATA DIR
 #=================================================
 
-ynh_backup --src_path="$datadir" --is_big
+# ynh_backup --src_path="$datadir"
 
 #=================================================
 # BACKUP THE NGINX CONFIGURATION
@@ -95,7 +95,7 @@ ynh_backup --src_path="/etc/systemd/system/$app.service"
 
 # ynh_backup --src_path="/etc/cron.d/$app"
 
-ynh_backup --src_path="/etc/$app/"
+# ynh_backup --src_path="/etc/$app/"
 
 #=================================================
 # BACKUP THE MYSQL DATABASE

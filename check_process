@@ -6,21 +6,18 @@
 ;; Test complet
 	; Manifest
 		domain="domain.tld"
-		path="/path"
-		admin="john"
-		language="fr"
+		path="/"
 		is_public=1
-		password="1Strong-Password"
 		port="666"
 	; Checks
 		pkg_linter=1
-		setup_sub_dir=1
+		setup_sub_dir=0
 		setup_root=1
 		setup_nourl=0
 		setup_private=1
 		setup_public=1
 		upgrade=1
-		upgrade=1	from_commit=CommitHash
+		upgrade=1	from_commit=20c58daa4be910e554058914633f9a94500bc7e1
 		backup_restore=1
 		multi_instance=1
 		port_already_use=0
@@ -29,6 +26,6 @@
 Email=
 Notification=none
 ;;; Upgrade options
-	; commit=CommitHash
-		name=Name and date of the commit.
-		manifest_arg=domain=DOMAIN&path=PATH&admin=USER&language=fr&is_public=1&password=pass&port=666&
+	; commit=20c58daa4be910e554058914633f9a94500bc7e1
+		name="Merge pull request #1 from YunoHost-Apps/helper-in-service"
+		manifest_arg=domain=domain.td&path=/&is_public=1&port=666&
