@@ -3,7 +3,7 @@
     "id": "uptime-kuma",
     "packaging_format": 1,
     "description": {
-        "en": " A fancy self-hosted monitoring tool like Uptime-Robot",
+        "en": "A fancy self-hosted monitoring tool like Uptime-Robot",
         "fr": "Un joli outil similaire à Uptime-Robot pour vérifier que des sites restent joignables"
     },
     "version": "1.0~ynh1",
