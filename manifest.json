@@ -41,7 +41,11 @@
             {
                 "name": "is_public",
                 "type": "boolean",
-                "default": true
+                "default": true,
+                "help": {
+                    "en": "This app has a status page meant to be public and a login-protected admin interface. It should be safe to expose publicly.",
+                    "fr": "Cette app a une page destinée à être publique et une interface d'admin protégée par mot de passe. Elle peut être exposée publiquement sans problème."
+                }
             }
         ]
     }
