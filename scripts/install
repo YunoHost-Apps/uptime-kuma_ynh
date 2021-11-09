@@ -85,7 +85,7 @@ ynh_script_progression --message="Setting up source files..." --weight=1
 
 ynh_app_setting_set --app=$app --key=final_path --value=$final_path
 # Download, check integrity, uncompress and patch the source from app.src
-ynh_setup_source --dest_dir="$final_path" --keep=data/
+ynh_setup_source --dest_dir="$final_path"
 # Download, check integrity, uncompress and patch the source from dist.src
 ynh_setup_source --source_id="dist" --dest_dir="$final_path/dist"
 
@@ -106,7 +106,9 @@ ynh_add_nginx_config
 #=================================================
 ynh_script_progression --message="Installing Uptime Kuma dependencies..." --weight=7
 
-cd $final_path && ynh_exec_warn_less $ynh_npm install
+pushd "$final_path"
+	ynh_exec_warn_less $ynh_npm install
+popd
 
 #=================================================
 # SETUP SYSTEMD
