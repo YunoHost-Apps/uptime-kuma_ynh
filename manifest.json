@@ -3,10 +3,10 @@
     "id": "uptime-kuma",
     "packaging_format": 1,
     "description": {
-        "en": "A fancy self-hosted monitoring tool like Uptime-Robot",
-        "fr": "Un joli outil similaire à Uptime-Robot pour vérifier que des sites restent joignables"
+        "en": "Self-hosted monitoring tool like Uptime-Robot",
+        "fr": "Outil de surveillance auto-hébergé similaire à Uptime-Robot"
     },
-    "version": "1.0~ynh1",
+    "version": "1.10.0~ynh1",
     "url": "https://github.com/louislam/uptime-kuma/",
     "upstream": {
         "license": "MIT",
@@ -22,7 +22,7 @@
         "email": "ketsapiwiq@protonmail.com"
     },
     "requirements": {
-        "yunohost": ">= 4.1.3"
+        "yunohost": ">= 4.2.3"
     },
     "multi_instance": true,
     "services": [
