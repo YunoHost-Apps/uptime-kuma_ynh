@@ -18,7 +18,8 @@ StandardError=inherit
 NoNewPrivileges=yes
 PrivateTmp=yes
 PrivateDevices=yes
-RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+# May conflict with SMTP: https://github.com/YunoHost-Apps/uptime-kuma_ynh/issues/6
+# RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
 RestrictNamespaces=yes
 RestrictRealtime=yes
 DevicePolicy=closed
