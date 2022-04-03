@@ -1,7 +1,6 @@
-SOURCE_URL=https://github.com/louislam/uptime-kuma/archive/refs/tags/1.11.3.tar.gz
-SOURCE_SUM=ae2605835d16d6ce5801ef5392d94c21aa5c2a9d129aa508c82b88a1e6d5327d
+SOURCE_URL=https://github.com/louislam/uptime-kuma/archive/refs/tags/1.13.1.tar.gz
+SOURCE_SUM=c549a3873ada86b810a8167165a0348ae8b725d8f20c1409e73e1690f0afaa34
 SOURCE_SUM_PRG=sha256sum
 SOURCE_FORMAT=tar.gz
 SOURCE_IN_SUBDIR=true
-SOURCE_FILENAME=uptime-kuma-1.11.3.tar.gz
-SOURCE_EXTRACT=true
+SOURCE_FILENAME=
