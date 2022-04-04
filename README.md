@@ -29,7 +29,7 @@ It is a self-hosted monitoring tool like "Uptime Robot".
 - Certificate Info
 
 
-**Shipped version:** 1.11.3~ynh2
+**Shipped version:** 1.13.1~ynh1
 
 **Demo:** https://demo.uptime.kuma.pet
 
@@ -51,7 +51,7 @@ It is a self-hosted monitoring tool like "Uptime Robot".
 * Official app website: https://uptime.kuma.pet/
 * Official user documentation: https://github.com/louislam/uptime-kuma/wiki
 * Official admin documentation: https://github.com/louislam/uptime-kuma/wiki
-* Upstream app code repository: https://github.com/louislam/uptime-kuma/
+* Upstream app code repository: https://github.com/louislam/uptime-kuma
 * YunoHost documentation for this app: https://yunohost.org/app_uptime-kuma
 * Report a bug: https://github.com/YunoHost-Apps/uptime-kuma_ynh/issues
 

@@ -6,7 +6,7 @@
         "en": "Self-hosted monitoring tool like Uptime-Robot",
         "fr": "Outil de surveillance auto-hébergé similaire à Uptime-Robot"
     },
-    "version": "1.11.3~ynh2",
+    "version": "1.13.1~ynh1",
     "url": "https://github.com/louislam/uptime-kuma/",
     "upstream": {
         "license": "MIT",
@@ -14,7 +14,7 @@
         "demo": "https://demo.uptime.kuma.pet",
         "admindoc": "https://github.com/louislam/uptime-kuma/wiki",
         "userdoc": "https://github.com/louislam/uptime-kuma/wiki",
-        "code": "https://github.com/louislam/uptime-kuma/"
+        "code": "https://github.com/louislam/uptime-kuma"
     },
     "license": "AGPL-3.0-or-later",
     "maintainer": {
