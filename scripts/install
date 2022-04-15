@@ -107,7 +107,7 @@ ynh_add_nginx_config
 ynh_script_progression --message="Installing Uptime Kuma dependencies..." --weight=7
 
 pushd "$final_path"
-	ynh_exec_warn_less $ynh_npm install
+	ynh_exec_warn_less ynh_exec_as $app $ynh_node_load_PATH $ynh_npm install
 popd
 
 #=================================================
