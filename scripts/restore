@@ -82,7 +82,7 @@ ynh_use_nodejs
 #=================================================
 ynh_script_progression --message="Reinstalling dependencies..." --weight=7
 
-cd $final_path && ynh_exec_warn_less $ynh_npm install
+cd $final_path && ynh_exec_warn_less ynh_exec_as $app $ynh_node_load_PATH $ynh_npm install
 
 #=================================================
 # RESTORE VARIOUS FILES
