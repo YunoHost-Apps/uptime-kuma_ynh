@@ -18,7 +18,7 @@ current_version=$(cat manifest.json | jq -j '.version|split("~")[0]')
 repo=$(cat manifest.json | jq -j '.upstream.code|split("https://github.com/")[1]')
 # Some jq magic is needed, because the latest upstream release is not always the latest version (e.g. security patches for older versions)
 version=$(curl --silent "https://api.github.com/repos/$repo/releases" | jq -r '.[] | select( .prerelease != true ) | .tag_name' | sort -V | tail -1)
-assets="https://github.com/$repo/archive/refs/tags/$version.tar.gz"
+declare -A assets=([app]="https://github.com/$repo/archive/refs/tags/$version.tar.gz" [dist]="https://github.com/$repo/releases/download/$version/dist.tar.gz")
 
 # Later down the script, we assume the version has only digits and dots
 # Sometimes the release name starts with a "v", so let's filter it out.
@@ -48,39 +48,41 @@ fi
 # UPDATE SOURCE FILES
 #=================================================
 
-# Let's download source tarball
-asset_url=$assets
-echo "Handling asset at $asset_url"
-src="app"
+for src in app dist; do
+    # Let's download source tarball
+    asset_url="${assets[$src]}"
+    echo "Handling asset at $asset_url"
 
-# Create the temporary directory
-tempdir="$(mktemp -d)"
+    # Create the temporary directory
+    tempdir="$(mktemp -d)"
 
-# Download sources and calculate checksum
-filename=${asset_url##*/}
-curl --silent -4 -L $asset_url -o "$tempdir/$filename"
-checksum=$(sha256sum "$tempdir/$filename" | head -c 64)
+    # Download sources and calculate checksum
+    filename=${asset_url##*/}
+    curl --silent -4 -L $asset_url -o "$tempdir/$filename"
+    checksum=$(sha256sum "$tempdir/$filename" | head -c 64)
 
-# Delete temporary directory
-rm -rf $tempdir
+    # Delete temporary directory
+    rm -rf $tempdir
 
-# Get extension
-if [[ $filename == *.tar.gz ]]; then
-  extension=tar.gz
-else
-  extension=${filename##*.}
-fi
+    # Get extension
+    if [[ $filename == *.tar.gz ]]; then
+        extension=tar.gz
+    else
+        extension=${filename##*.}
+    fi
 
-# Rewrite source file
-cat <<EOT > conf/$src.src
+    # Rewrite source file
+    cat <<EOT > conf/$src.src
 SOURCE_URL=$asset_url
 SOURCE_SUM=$checksum
 SOURCE_SUM_PRG=sha256sum
 SOURCE_FORMAT=$extension
 SOURCE_IN_SUBDIR=true
-SOURCE_FILENAME=
+SOURCE_FILENAME=$filename
+SOURCE_EXTRACT=true
 EOT
-echo "... conf/$src.src updated"
+    echo "... conf/$src.src updated"
+done
 
 #
 #=================================================
