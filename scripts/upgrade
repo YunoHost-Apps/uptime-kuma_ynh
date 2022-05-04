@@ -102,6 +102,7 @@ pushd "$final_path"
 	ynh_exec_warn_less ynh_exec_as $app $ynh_node_load_PATH $ynh_npm install
 popd
 
+
 #=================================================
 # SETUP SYSTEMD
 #=================================================
@@ -140,6 +141,15 @@ ynh_systemd_action --service_name=$app --action="start" --log_path="/var/log/$ap
 ynh_script_progression --message="Reloading NGINX web server..." --weight=1
 
 ynh_systemd_action --service_name=nginx --action=reload
+
+#=================================================
+# SPECIFIC UPGRADE
+#=================================================
+ynh_script_progression --message="Upgrading download-dist Uptime Kuma dependencies..." --weight=1
+
+pushd "$final_path"
+	ynh_exec_warn_less ynh_exec_as $app $ynh_node_load_PATH $ynh_npm run download-dist
+popd
 
 #=================================================
 # END OF SCRIPT
