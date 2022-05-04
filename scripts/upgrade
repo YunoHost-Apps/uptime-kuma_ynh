@@ -104,6 +104,25 @@ popd
 
 
 #=================================================
+# SPECIFIC UPGRADE
+#=================================================
+ynh_script_progression --message="Upgrading Uptime Kuma other dependencies..." --weight=1
+
+pushd "$final_path"
+	ynh_exec_warn_less ynh_exec_as $app $ynh_node_load_PATH $ynh_npm ci --production
+popd
+
+
+#=================================================
+# SPECIFIC UPGRADE
+#=================================================
+ynh_script_progression --message="Upgrading Uptime Kuma yet another dependencies..." --weight=1
+
+
+pushd "$final_path"
+	ynh_exec_warn_less ynh_exec_as $app $ynh_node_load_PATH $ynh_npm run download-dist
+popd
+#=================================================
 # SETUP SYSTEMD
 #=================================================
 ynh_script_progression --message="Upgrading systemd configuration..." --weight=1
