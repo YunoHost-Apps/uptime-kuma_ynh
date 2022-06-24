@@ -29,7 +29,7 @@ It is a self-hosted monitoring tool like "Uptime Robot".
 - Certificate Info
 
 
-**Shipped version:** 1.17.0~ynh1
+**Shipped version:** 1.17.1~ynh1
 
 **Demo:** https://demo.uptime.kuma.pet
 
