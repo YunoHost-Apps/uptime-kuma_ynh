@@ -16,7 +16,7 @@
         "userdoc": "https://github.com/louislam/uptime-kuma/wiki",
         "code": "https://github.com/louislam/uptime-kuma"
     },
-    "license": "AGPL-3.0-or-later",
+    "license": "MIT",
     "maintainer": {
         "name": "Hadrien",
         "email": "ketsapiwiq@protonmail.com"
