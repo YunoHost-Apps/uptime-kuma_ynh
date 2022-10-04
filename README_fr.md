@@ -29,7 +29,7 @@ It is a self-hosted monitoring tool like "Uptime Robot".
 - Certificate Info
 
 
-**Version incluse :** 1.18.0~ynh1 *(:warning: Il s'agit de la branche `testing`. La [branche `master`](https://github.com/YunoHost-Apps/uptime-kuma_ynh/tree/master) utilisée dans le catalogue est actuellement en 1.17.1\~ynh1.)*
+**Version incluse :** 1.18.0~ynh1
 
 
 **Démo :** https://demo.uptime.kuma.pet
