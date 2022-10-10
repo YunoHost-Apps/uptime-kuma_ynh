@@ -1,7 +1,7 @@
-SOURCE_URL=https://github.com/louislam/uptime-kuma/archive/refs/tags/1.18.3.tar.gz
-SOURCE_SUM=132fb5aed19f4eaa21ee383fa6a9f0756d2e01902f947c5859ad77e7495d1b4e
+SOURCE_URL=https://github.com/louislam/uptime-kuma/archive/refs/tags/1.18.4.tar.gz
+SOURCE_SUM=2c7425745a237b9177ccb53360827974c4f3b48693751cf496fcdd7cf6961385
 SOURCE_SUM_PRG=sha256sum
 SOURCE_FORMAT=tar.gz
 SOURCE_IN_SUBDIR=true
-SOURCE_FILENAME=1.18.3.tar.gz
+SOURCE_FILENAME=1.18.4.tar.gz
 SOURCE_EXTRACT=true
