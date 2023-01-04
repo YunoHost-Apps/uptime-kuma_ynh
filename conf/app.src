@@ -1,7 +1,7 @@
-SOURCE_URL=https://github.com/louislam/uptime-kuma/archive/refs/tags/1.19.0.tar.gz
-SOURCE_SUM=7c175fec929dc23bf0c90399ce1a7491315cdef113eefaccd61fd9dd98729518
+SOURCE_URL=https://github.com/louislam/uptime-kuma/archive/refs/tags/1.19.3.tar.gz
+SOURCE_SUM=1aa3e7ad402ecd42cca2fdc8808099e5019d0018ad47a140fd42d7eeb8028cca
 SOURCE_SUM_PRG=sha256sum
 SOURCE_FORMAT=tar.gz
 SOURCE_IN_SUBDIR=true
-SOURCE_FILENAME=1.19.0.tar.gz
+SOURCE_FILENAME=1.19.3.tar.gz
 SOURCE_EXTRACT=true
