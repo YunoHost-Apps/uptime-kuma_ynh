@@ -28,8 +28,7 @@ It is a self-hosted monitoring tool like "Uptime Robot".
 - Ping Chart
 - Certificate Info
 
-
-**Shipped version:** 1.19.5~ynh1
+**Shipped version:** 1.19.6~ynh1
 
 **Demo:** https://demo.uptime.kuma.pet
 
