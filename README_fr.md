@@ -5,15 +5,15 @@ It shall NOT be edited by hand.
 
 # Uptime Kuma pour YunoHost
 
-[![Niveau d'intégration](https://dash.yunohost.org/integration/uptime-kuma.svg)](https://dash.yunohost.org/appci/app/uptime-kuma) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/uptime-kuma.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/uptime-kuma.maintain.svg)  
+[![Niveau d’intégration](https://dash.yunohost.org/integration/uptime-kuma.svg)](https://dash.yunohost.org/appci/app/uptime-kuma) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/uptime-kuma.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/uptime-kuma.maintain.svg)  
 [![Installer Uptime Kuma avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=uptime-kuma)
 
 *[Read this readme in english.](./README.md)*
 
-> *Ce package vous permet d'installer Uptime Kuma rapidement et simplement sur un serveur YunoHost.
-Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour savoir comment l'installer et en profiter.*
+> *Ce package vous permet d’installer Uptime Kuma rapidement et simplement sur un serveur YunoHost.
+Si vous n’avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour savoir comment l’installer et en profiter.*
 
-## Vue d'ensemble
+## Vue d’ensemble
 
 It is a self-hosted monitoring tool like "Uptime Robot".
 
@@ -29,13 +29,13 @@ It is a self-hosted monitoring tool like "Uptime Robot".
 - Certificate Info
 
 
-**Version incluse :** 1.19.0~ynh1
+**Version incluse :** 1.19.6~ynh1
 
 **Démo :** https://demo.uptime.kuma.pet
 
-## Captures d'écran
+## Captures d’écran
 
-![Capture d'écran de Uptime Kuma](./doc/screenshots/example.jpg)
+![Capture d’écran de Uptime Kuma](./doc/screenshots/example.jpg)
 
 ## Avertissements / informations importantes
 
@@ -48,10 +48,10 @@ It is a self-hosted monitoring tool like "Uptime Robot".
 
 ## Documentations et ressources
 
-* Site officiel de l'app : <https://uptime.kuma.pet/>
+* Site officiel de l’app : <https://uptime.kuma.pet/>
 * Documentation officielle utilisateur : <https://github.com/louislam/uptime-kuma/wiki>
-* Documentation officielle de l'admin : <https://github.com/louislam/uptime-kuma/wiki>
-* Dépôt de code officiel de l'app : <https://github.com/louislam/uptime-kuma>
+* Documentation officielle de l’admin : <https://github.com/louislam/uptime-kuma/wiki>
+* Dépôt de code officiel de l’app : <https://github.com/louislam/uptime-kuma>
 * Documentation YunoHost pour cette app : <https://yunohost.org/app_uptime-kuma>
 * Signaler un bug : <https://github.com/YunoHost-Apps/uptime-kuma_ynh/issues>
 
@@ -67,4 +67,4 @@ ou
 sudo yunohost app upgrade uptime-kuma -u https://github.com/YunoHost-Apps/uptime-kuma_ynh/tree/testing --debug
 ```
 
-**Plus d'infos sur le packaging d'applications :** <https://yunohost.org/packaging_apps>
+**Plus d’infos sur le packaging d’applications :** <https://yunohost.org/packaging_apps>
