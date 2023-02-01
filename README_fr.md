@@ -5,7 +5,7 @@ It shall NOT be edited by hand.
 
 # Uptime Kuma pour YunoHost
 
-[![Niveau d’intégration](https://dash.yunohost.org/integration/uptime-kuma.svg)](https://dash.yunohost.org/appci/app/uptime-kuma) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/uptime-kuma.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/uptime-kuma.maintain.svg)  
+[![Niveau d’intégration](https://dash.yunohost.org/integration/uptime-kuma.svg)](https://dash.yunohost.org/appci/app/uptime-kuma) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/uptime-kuma.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/uptime-kuma.maintain.svg)
 [![Installer Uptime Kuma avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=uptime-kuma)
 
 *[Read this readme in english.](./README.md)*
