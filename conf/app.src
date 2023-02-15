@@ -1,7 +1,7 @@
-SOURCE_URL=https://github.com/louislam/uptime-kuma/archive/refs/tags/1.20.0.tar.gz
-SOURCE_SUM=bc8325e69efdc580c3d5064374096415af806838feda7f471bde2aa6229ef401
+SOURCE_URL=https://github.com/louislam/uptime-kuma/archive/refs/tags/1.20.1.tar.gz
+SOURCE_SUM=c1125217d17538899842f640e9b00db6979854552858d79a5e05a64e5cda3b26
 SOURCE_SUM_PRG=sha256sum
 SOURCE_FORMAT=tar.gz
 SOURCE_IN_SUBDIR=true
-SOURCE_FILENAME=1.20.0.tar.gz
+SOURCE_FILENAME=1.20.1.tar.gz
 SOURCE_EXTRACT=true
