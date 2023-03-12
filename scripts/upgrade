@@ -65,11 +65,11 @@ ynh_system_user_create --username=$app --home_dir="$final_path"
 if [ "$upgrade_type" == "UPGRADE_APP" ]
 then
 	ynh_script_progression --message="Upgrading source files..." --weight=1
-
 	# Download, check integrity, uncompress and patch the source from app.src
-    ynh_setup_source --dest_dir="$final_path" --keep=data/
+    ynh_setup_source --source_id="app" --dest_dir="$final_path"
     # Download, check integrity, uncompress and patch the source from dist.src
     ynh_setup_source --source_id="dist" --dest_dir="$final_path/dist"
+
 fi
 
 chmod 750 "$final_path"
