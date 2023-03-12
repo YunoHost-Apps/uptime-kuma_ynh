@@ -58,17 +58,6 @@ ynh_script_progression --message="Recreating the dedicated system user..." --wei
 ynh_system_user_create --username=$app --home_dir="$final_path"
 
 #=================================================
-# RESTORE THE APP MAIN DIR
-#=================================================
-ynh_script_progression --message="Restoring the app main directory..." --weight=1
-
-ynh_restore_file --origin_path="$final_path"
-
-chmod 750 "$final_path"
-chmod -R o-rwx "$final_path"
-chown -R $app:www-data "$final_path"
-
-#=================================================
 # INSTALL NODEJS
 #=================================================
 ynh_script_progression --message="Reinstalling nodejs version..." --weight=2
@@ -83,6 +72,17 @@ ynh_use_nodejs
 ynh_script_progression --message="Reinstalling dependencies..." --weight=7
 
 cd $final_path && ynh_exec_warn_less ynh_exec_as $app $ynh_node_load_PATH $ynh_npm install
+
+#=================================================
+# RESTORE THE APP DATA DIR
+#=================================================
+ynh_script_progression --message="Restoring the app data directory..." --weight=1
+
+ynh_restore_file --origin_path="$final_path/data"
+
+chmod 750 "$final_path/data"
+chmod -R o-rwx "$final_path/data"
+chown -R $app:www-data "$final_path/data"
 
 #=================================================
 # RESTORE VARIOUS FILES

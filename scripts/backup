@@ -37,10 +37,10 @@ domain=$(ynh_app_setting_get --app=$app --key=domain)
 ynh_print_info --message="Declaring files to be backed up..."
 
 #=================================================
-# BACKUP THE APP MAIN DIR
+# BACKUP THE APP DATA DIRS
 #=================================================
 
-ynh_backup --src_path="$final_path" --is_big
+ynh_backup --src_path="$final_path/data" --is_big
 
 #=================================================
 # BACKUP THE NGINX CONFIGURATION
