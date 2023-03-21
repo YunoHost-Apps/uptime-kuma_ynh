@@ -57,7 +57,7 @@ ynh_add_systemd_config
 # Use logrotate to manage app-specific logfile(s)
 ynh_use_logrotate --non-append
 
-yunohost service add $app --description="Uptime Kuma, a fancy monitoring tool" --log="/var/log/$app/$app.log"
+yunohost service add $app --description="Monitoring tool" --log="/var/log/$app/$app.log"
 
 #=================================================
 # SPECIFIC UPGRADE

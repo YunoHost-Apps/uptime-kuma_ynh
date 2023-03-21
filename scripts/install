@@ -24,6 +24,7 @@ ynh_script_progression --message="Setting up source files..." --weight=1
 
 # Download, check integrity, uncompress and patch the source from app.src
 ynh_setup_source --dest_dir="$install_dir"
+
 # Download, check integrity, uncompress and patch the source from dist.src
 ynh_setup_source --dest_dir="$install_dir/dist" --source_id="dist"
 
@@ -44,7 +45,7 @@ ynh_add_systemd_config
 # Use logrotate to manage application logfile(s)
 ynh_use_logrotate
 
-yunohost service add $app --description="Uptime Kuma, a fancy monitoring tool" --log="/var/log/$app/$app.log"
+yunohost service add $app --description="Monitoring tool" --log="/var/log/$app/$app.log"
 
 #=================================================
 # SPECIFIC SETUP
