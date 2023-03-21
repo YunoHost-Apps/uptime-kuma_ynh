@@ -1,5 +1,5 @@
-SOURCE_URL=https://github.com/louislam/uptime-kuma/releases/download/1.20.2/dist.tar.gz
-SOURCE_SUM=41f0fe9f1d9ec432c98e8bce2f25b59dd61c11f774bd2ad53d5cec1d795fd782
+SOURCE_URL=https://github.com/louislam/uptime-kuma/releases/download/1.21.0/dist.tar.gz
+SOURCE_SUM=7c9e7ee40615bfb8ae6f633ac766b94bbccf86c1a5c284a82d00b4a1da303e07
 SOURCE_SUM_PRG=sha256sum
 SOURCE_FORMAT=tar.gz
 SOURCE_IN_SUBDIR=true
