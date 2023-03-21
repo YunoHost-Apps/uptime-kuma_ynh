@@ -33,6 +33,7 @@ then
 	ynh_script_progression --message="Upgrading source files..." --weight=1
 	# Download, check integrity, uncompress and patch the source from app.src
     ynh_setup_source --dest_dir="$install_dir"
+
     # Download, check integrity, uncompress and patch the source from dist.src
     ynh_setup_source --dest_dir="$install_dir/dist" --source_id="dist"
 fi
@@ -46,7 +47,6 @@ chown -R $app:www-data "$install_dir"
 ynh_script_progression --message="Upgrading nodejs..." --weight=2
 
 ynh_install_nodejs --nodejs_version=$nodejs_version
-ynh_use_nodejs
 
 # Create a dedicated NGINX config
 ynh_add_nginx_config
@@ -65,6 +65,7 @@ yunohost service add $app --description="Monitoring tool" --log="/var/log/$app/$
 ynh_script_progression --message="Upgrading Uptime Kuma dependencies..." --weight=7
 
 pushd "$install_dir"
+	ynh_use_nodejs
 	ynh_exec_warn_less ynh_exec_as $app $ynh_node_load_PATH $ynh_npm install
 popd
 
