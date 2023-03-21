@@ -21,9 +21,8 @@ It is a self-hosted monitoring tool like "Uptime Robot".
 ### Features
 
 - Monitoring uptime for HTTP(s) / TCP / Ping / DNS Record / Push.
-- Fancy, Reactive, Fast UI/UX.
-- Notifications via Telegram, Discord, Gotify, Slack, Pushover, Email (SMTP), and 70+ notification services, click here for the full list.
-- 20 second intervals.
+- Notifications via Telegram, Discord, Gotify, Slack, Pushover, Email (SMTP)...
+- 20 second intervals
 - Multi Languages
 - Simple Status Page
 - Ping Chart
@@ -38,20 +37,10 @@ It is a self-hosted monitoring tool like "Uptime Robot".
 
 ![Capture d’écran de Uptime Kuma](./doc/screenshots/example.jpg)
 
-## Avertissements / informations importantes
-
-- Requires a full dedicated domain
-- node_modules folder is backed up and shouldn't be (600Mo...)
-- ARM architecture not supported
-- This app needs a manual post-install
-- Uses N to install specific nodejs version
-- We could pre-configure mail notifications with YunoHost mail server as an improvement. See comments in file to try to do it with Curl and WebSockets or Sqlite.
-
 ## Documentations et ressources
 
 * Site officiel de l’app : <https://uptime.kuma.pet/>
 * Documentation officielle utilisateur : <https://github.com/louislam/uptime-kuma/wiki>
-* Documentation officielle de l’admin : <https://github.com/louislam/uptime-kuma/wiki>
 * Dépôt de code officiel de l’app : <https://github.com/louislam/uptime-kuma>
 * Documentation YunoHost pour cette app : <https://yunohost.org/app_uptime-kuma>
 * Signaler un bug : <https://github.com/YunoHost-Apps/uptime-kuma_ynh/issues>

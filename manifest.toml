@@ -1,0 +1,61 @@
+packaging_format = 2
+
+id = "uptime-kuma"
+name = "Uptime Kuma"
+description.en = "Monitoring tool like Uptime-Robot"
+description.fr = "Outil de surveillance similaire à Uptime-Robot"
+
+version = "1.21.0~ynh1"
+
+maintainers = ["Hadrien"]
+
+[upstream]
+license = "MIT"
+website = "https://uptime.kuma.pet/"
+demo = "https://demo.uptime.kuma.pet"
+userdoc = "https://github.com/louislam/uptime-kuma/wiki"
+code = "https://github.com/louislam/uptime-kuma"
+
+[integration]
+yunohost = ">= 11.1.15"
+architectures = [ "amd64" ]
+multi_instance = true
+ldap = false
+sso = false
+disk = "50M"
+ram.build = "50M"
+ram.runtime = "50M"
+
+[install]
+    [install.domain]
+    type = "domain"
+    full_domain = true
+
+    [install.init_main_permission]
+    help.en = "This app has a status page meant to be public and a login-protected admin interface. It should be safe to expose publicly."
+    help.fr = "Cette app a une page destinée à être publique et une interface d'admin protégée par mot de passe. Elle peut être exposée publiquement sans problème."
+    type = "group"
+    default = "visitors"
+
+[resources]
+    [resources.sources]
+        [resources.sources.dist]
+        url = "https://github.com/louislam/uptime-kuma/releases/download/1.21.0/dist.tar.gz"
+        sha256 = "7c9e7ee40615bfb8ae6f633ac766b94bbccf86c1a5c284a82d00b4a1da303e07"
+
+        [resources.sources.main]
+        url = "https://github.com/louislam/uptime-kuma/archive/refs/tags/1.21.0.tar.gz"
+        sha256 = "f913a9ed65c77031944127689a7db7a19556ce5f4a0e7f8d4d3271fcc84aa6b1"
+
+    [resources.ports]
+
+    [resources.system_user]
+
+    [resources.install_dir]
+
+    [resources.permissions]
+    main.url = "/"
+    api.url = "/api"
+    api.allowed = "visitors"
+    api.show_tile = false
+    api.protected = true
