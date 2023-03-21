@@ -1,5 +1,5 @@
 [Unit]
-Description=Uptime Kuma, a fancy monitoring tool
+Description=Uptime Kuma: monitoring tool
 After=network.target
 
 [Service]
