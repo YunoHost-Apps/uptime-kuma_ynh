@@ -15,7 +15,6 @@ source /usr/share/yunohost/helpers
 ynh_script_progression --message="Installing nodejs..." --weight=2
 
 ynh_install_nodejs --nodejs_version=$nodejs_version
-ynh_use_nodejs
 
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
@@ -53,6 +52,7 @@ yunohost service add $app --description="Monitoring tool" --log="/var/log/$app/$
 #REMOVEME? ynh_script_progression --message="Installing Uptime Kuma dependencies..." --weight=7
 
 pushd "$install_dir"
+	ynh_use_nodejs
 	ynh_exec_warn_less ynh_exec_as $app $ynh_node_load_PATH $ynh_npm install
 popd
 
