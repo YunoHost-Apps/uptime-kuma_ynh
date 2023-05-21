@@ -42,10 +42,14 @@ ram.runtime = "50M"
         [resources.sources.dist]
         url = "https://github.com/louislam/uptime-kuma/releases/download/1.21.0/dist.tar.gz"
         sha256 = "7c9e7ee40615bfb8ae6f633ac766b94bbccf86c1a5c284a82d00b4a1da303e07"
+        autoupdate.strategy = "latest_github_release"
+        autoupdate.asset = "dist.tar.gz"
 
         [resources.sources.main]
         url = "https://github.com/louislam/uptime-kuma/archive/refs/tags/1.21.0.tar.gz"
         sha256 = "f913a9ed65c77031944127689a7db7a19556ce5f4a0e7f8d4d3271fcc84aa6b1"
+        autoupdate.strategy = "latest_github_release"
+        autoupdate.asset = "tarball"
 
     [resources.ports]
 
