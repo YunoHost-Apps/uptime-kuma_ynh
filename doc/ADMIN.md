@@ -1,6 +1,3 @@
-- Requires a full dedicated domain
 - node_modules folder is backed up and shouldn't be (600Mo...)
-- ARM architecture not supported
 - This app needs a manual post-install
-- Uses N to install specific nodejs version
 - We could pre-configure mail notifications with YunoHost mail server as an improvement. See comments in file to try to do it with Curl and WebSockets or Sqlite.
