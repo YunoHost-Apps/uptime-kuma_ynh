@@ -17,7 +17,7 @@ userdoc = "https://github.com/louislam/uptime-kuma/wiki"
 code = "https://github.com/louislam/uptime-kuma"
 
 [integration]
-yunohost = ">= 11.1.19"
+yunohost = ">= 11.2"
 architectures = "all"
 multi_instance = true
 ldap = false
