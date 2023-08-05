@@ -7,7 +7,7 @@ description.fr = "Outil de surveillance similaire à Uptime-Robot"
 
 version = "1.22.1~ynh1"
 
-maintainers = ["ketsapiwiq", "ericgaspar"]
+maintainers = ["ketsapiwiq", "eric_G"]
 
 [upstream]
 license = "MIT"
