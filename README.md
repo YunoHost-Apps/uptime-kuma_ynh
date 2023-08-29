@@ -16,7 +16,7 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 
 ## Overview
 
-It is a self-hosted monitoring tool like "Uptime Robot".
+Uptime Kuma is a self-hosted monitoring tool like "Uptime Robot".
 
 ### Features
 
@@ -29,7 +29,7 @@ It is a self-hosted monitoring tool like "Uptime Robot".
 - Certificate Info
 
 
-**Shipped version:** 1.23.0~ynh1
+**Shipped version:** 1.23.1~ynh1
 
 **Demo:** https://demo.uptime.kuma.pet
 
