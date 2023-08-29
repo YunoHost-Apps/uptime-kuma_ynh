@@ -16,18 +16,17 @@ Si vous n’avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) po
 
 ## Vue d’ensemble
 
-It is a self-hosted monitoring tool like "Uptime Robot".
+Uptime Kuma est un outil de surveillance auto-hébergé comme « Uptime Robot ».
 
-### Features
+### Caractéristiques
 
-- Monitoring uptime for HTTP(s) / TCP / Ping / DNS Record / Push.
+- Surveillance de la disponibilité pour HTTP(s) / TCP / Ping / DNS Record / Push.
 - Notifications via Telegram, Discord, Gotify, Slack, Pushover, Email (SMTP)...
-- 20 second intervals
-- Multi Languages
-- Simple Status Page
-- Ping Chart
-- Certificate Info
-
+- intervalles de 20 secondes
+- Multi langues
+- Page d'état simple
+- Graphique Ping
+- Informations sur le certificat
 
 **Version incluse :** 1.23.1~ynh1
 
