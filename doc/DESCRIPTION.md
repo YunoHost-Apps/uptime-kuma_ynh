@@ -1,4 +1,4 @@
-It is a self-hosted monitoring tool like "Uptime Robot".
+Uptime Kuma is a self-hosted monitoring tool like "Uptime Robot".
 
 ### Features
 
