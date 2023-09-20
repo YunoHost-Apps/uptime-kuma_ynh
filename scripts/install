@@ -53,7 +53,7 @@ ynh_script_progression --message="Installing Uptime Kuma dependencies..." --weig
 
 pushd "$install_dir"
 	ynh_use_nodejs
-	ynh_exec_warn_less ynh_exec_as $app $ynh_node_load_PATH $ynh_npm install
+	ynh_exec_warn_less ynh_exec_as $app $ynh_node_load_PATH $ynh_npm install --production
 popd
 
 #=================================================

@@ -8,6 +8,7 @@ Restart=always
 User=__APP__
 Group=__APP__
 WorkingDirectory=__INSTALL_DIR__/
+Environment="NODE_ENV=production"
 ExecStart=__YNH_NODE__ server/server.js --port=__PORT__
 StandardOutput=append:/var/log/__APP__/__APP__.log
 StandardError=inherit
