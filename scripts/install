@@ -49,7 +49,7 @@ yunohost service add $app --description="Monitoring tool" --log="/var/log/$app/$
 #=================================================
 # SPECIFIC SETUP
 #=================================================
-ynh_script_progression --message="Installing Uptime Kuma dependencies..." --weight=7
+ynh_script_progression --message="Installing $app dependencies..." --weight=7
 
 pushd "$install_dir"
 	ynh_use_nodejs
