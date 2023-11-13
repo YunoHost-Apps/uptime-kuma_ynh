@@ -41,6 +41,7 @@ Uptime Kuma est un outil de surveillance auto-hébergé comme « Uptime Robot »
 * Site officiel de l’app : <https://uptime.kuma.pet/>
 * Documentation officielle utilisateur : <https://github.com/louislam/uptime-kuma/wiki>
 * Dépôt de code officiel de l’app : <https://github.com/louislam/uptime-kuma>
+* YunoHost Store: <https://apps.yunohost.org/app/uptime-kuma>
 * Signaler un bug : <https://github.com/YunoHost-Apps/uptime-kuma_ynh/issues>
 
 ## Informations pour les développeurs
