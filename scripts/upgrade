@@ -42,9 +42,9 @@ chmod -R o-rwx "$install_dir"
 chown -R $app:www-data "$install_dir"
 
 #=================================================
-# INSTALL NODEJS
+# REAPPLY SYSTEM CONFIGURATIONS
 #=================================================
-ynh_script_progression --message="Upgrading nodejs..." --weight=2
+ynh_script_progression --message="Upgrading system configurations related to $app..." --weight=1
 
 ynh_install_nodejs --nodejs_version=$nodejs_version
 
@@ -62,11 +62,11 @@ yunohost service add $app --description="Monitoring tool" --log="/var/log/$app/$
 #=================================================
 # SPECIFIC UPGRADE
 #=================================================
-ynh_script_progression --message="Upgrading Uptime Kuma dependencies..." --weight=7
+ynh_script_progression --message="Upgrading $app dependencies..." --weight=7
 
 pushd "$install_dir"
 	ynh_use_nodejs
-	ynh_exec_warn_less ynh_exec_as $app $ynh_node_load_PATH $ynh_npm install
+	ynh_exec_warn_less ynh_exec_as $app $ynh_node_load_PATH $ynh_npm install --production
 popd
 
 #=================================================
