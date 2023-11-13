@@ -29,7 +29,7 @@ Uptime Kuma is a self-hosted monitoring tool like "Uptime Robot".
 - Certificate Info
 
 
-**Shipped version:** 1.23.3~ynh1
+**Shipped version:** 1.23.4~ynh1
 
 **Demo:** https://demo.uptime.kuma.pet
 
@@ -42,6 +42,7 @@ Uptime Kuma is a self-hosted monitoring tool like "Uptime Robot".
 * Official app website: <https://uptime.kuma.pet/>
 * Official user documentation: <https://github.com/louislam/uptime-kuma/wiki>
 * Upstream app code repository: <https://github.com/louislam/uptime-kuma>
+* YunoHost Store: <https://apps.yunohost.org/app/uptime-kuma>
 * Report a bug: <https://github.com/YunoHost-Apps/uptime-kuma_ynh/issues>
 
 ## Developer info
