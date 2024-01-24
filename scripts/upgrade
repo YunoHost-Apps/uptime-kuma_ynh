@@ -69,7 +69,7 @@ pushd "$install_dir"
 	ynh_exec_warn_less ynh_exec_as $app $ynh_node_load_PATH $ynh_npm install --omit=dev
 	ynh_exec_warn_less ynh_exec_as $app $ynh_node_load_PATH $ynh_npm run download-dist
 	# Residue of old versions caching
-	ynh_exec_warn_less ynh_exec_as $app rm -rf .cache
+	ynh_secure_remove $install_dir/.cache
 popd
 
 #=================================================
