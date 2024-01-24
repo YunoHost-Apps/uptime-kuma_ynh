@@ -21,6 +21,14 @@ chmod -R o-rwx "$install_dir"
 chown -R $app:www-data "$install_dir"
 
 #=================================================
+# REINSTALL DEPENDENCIES
+#=================================================
+ynh_script_progression --message="Reinstalling dependencies..." --weight=1
+
+# Define and install dependencies
+ynh_install_nodejs --nodejs_version=$nodejs_version
+
+#=================================================
 # RESTORE SYSTEM CONFIGURATIONS
 #=================================================
 # RESTORE THE PHP-FPM CONFIGURATION
