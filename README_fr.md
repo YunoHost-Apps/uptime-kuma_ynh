@@ -28,7 +28,7 @@ Uptime Kuma est un outil de surveillance auto-hébergé comme « Uptime Robot »
 - Graphique Ping
 - Informations sur le certificat
 
-**Version incluse :** 1.23.12~ynh1
+**Version incluse :** 1.23.13~ynh1
 
 **Démo :** <https://demo.uptime.kuma.pet>
 
