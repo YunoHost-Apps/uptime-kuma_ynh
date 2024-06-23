@@ -3,7 +3,7 @@
 请勿手动编辑。
 -->
 
-# YunoHost 的 Uptime Kuma
+# YunoHost 上的 Uptime Kuma
 
 [![集成程度](https://dash.yunohost.org/integration/uptime-kuma.svg)](https://dash.yunohost.org/appci/app/uptime-kuma) ![工作状态](https://ci-apps.yunohost.org/ci/badges/uptime-kuma.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/uptime-kuma.maintain.svg)
 
