@@ -15,14 +15,10 @@ ynh_systemctl --service=$app --action="stop"
 #=================================================
 ynh_script_progression "Upgrading source files..."
 
-# Download, check integrity, uncompress and patch the source from app.src
 ynh_setup_source --dest_dir="$install_dir"
 
-# Download, check integrity, uncompress and patch the source from dist.src
 ynh_setup_source --dest_dir="$install_dir/dist" --source_id="dist"
 
-#REMOVEME? Assuming the install dir is setup using ynh_setup_source, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | chmod -R o-rwx "$install_dir"
-#REMOVEME? Assuming the install dir is setup using ynh_setup_source, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | chown -R $app:www-data "$install_dir"
 #=================================================
 # REAPPLY SYSTEM CONFIGURATIONS
 #=================================================
@@ -30,13 +26,10 @@ ynh_script_progression "Upgrading system configurations related to $app..."
 
 ynh_nodejs_install
 
-# Create a dedicated NGINX config
 ynh_config_add_nginx
 
-# Create a dedicated systemd config
 ynh_config_add_systemd
 
-# Use logrotate to manage app-specific logfile(s)
 ynh_config_add_logrotate
 
 yunohost service add $app --description="Monitoring tool" --log="/var/log/$app/$app.log"
@@ -45,9 +38,8 @@ yunohost service add $app --description="Monitoring tool" --log="/var/log/$app/$
 ynh_script_progression "Upgrading $app dependencies..."
 
 pushd "$install_dir"
-
-	ynh_hide_warnings ynh_exec_as_app node_load_PATH npm install --omit=dev
-	ynh_hide_warnings ynh_exec_as_app node_load_PATH npm run download-dist
+	ynh_hide_warnings ynh_exec_as_app npm install --omit=dev
+	ynh_hide_warnings ynh_exec_as_app npm run download-dist
 	# Residue of old versions caching
 	ynh_safe_rm $install_dir/.cache
 popd
