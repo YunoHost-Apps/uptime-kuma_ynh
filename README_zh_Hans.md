@@ -5,7 +5,7 @@
 
 # YunoHost 上的 Uptime Kuma
 
-[![集成程度](https://dash.yunohost.org/integration/uptime-kuma.svg)](https://dash.yunohost.org/appci/app/uptime-kuma) ![工作状态](https://ci-apps.yunohost.org/ci/badges/uptime-kuma.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/uptime-kuma.maintain.svg)
+[![集成程度](https://dash.yunohost.org/integration/uptime-kuma.svg)](https://ci-apps.yunohost.org/ci/apps/uptime-kuma/) ![工作状态](https://ci-apps.yunohost.org/ci/badges/uptime-kuma.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/uptime-kuma.maintain.svg)
 
 [![使用 YunoHost 安装 Uptime Kuma](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=uptime-kuma)
 
@@ -29,7 +29,7 @@ Uptime Kuma is a self-hosted monitoring tool like "Uptime Robot".
 - Certificate Info
 
 
-**分发版本：** 1.23.13~ynh1
+**分发版本：** 1.23.15~ynh1
 
 **演示：** <https://demo.uptime.kuma.pet>
 

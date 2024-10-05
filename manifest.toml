@@ -5,7 +5,7 @@ name = "Uptime Kuma"
 description.en = "Monitoring tool like Uptime-Robot"
 description.fr = "Outil de surveillance similaire à Uptime-Robot"
 
-version = "1.23.13~ynh1"
+version = "1.23.15~ynh1"
 
 maintainers = ["ketsapiwiq"]
 
@@ -40,14 +40,14 @@ ram.runtime = "50M"
 [resources]
     [resources.sources]
         [resources.sources.dist]
-        url = "https://github.com/louislam/uptime-kuma/releases/download/1.23.13/dist.tar.gz"
-        sha256 = "18122dc3b4197bfebc17aa76fdbc4f9a593f09077492f6cdb4facc2d9c6cdcee"
+        url = "https://github.com/louislam/uptime-kuma/releases/download/1.23.15/dist.tar.gz"
+        sha256 = "e06966810f08b38115959029a3fe5e15705a2d5bfe7ecdf702bb6295c47d0195"
         autoupdate.strategy = "latest_github_release"
         autoupdate.asset = "dist.tar.gz"
 
         [resources.sources.main]
-        url = "https://github.com/louislam/uptime-kuma/archive/refs/tags/1.23.13.tar.gz"
-        sha256 = "8cec2f2ce5cb7111a6b1c7f6e2a581b909ef81c0577d53b3b89b1143f4f21e91"
+        url = "https://github.com/louislam/uptime-kuma/archive/refs/tags/1.23.15.tar.gz"
+        sha256 = "93af5d06352f5abb8303e27db3d10657796744ff8971f2bc7d2893e1e8dbd49a"
         autoupdate.strategy = "latest_github_release"
         autoupdate.asset = "tarball"
 
