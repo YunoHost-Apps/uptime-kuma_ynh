@@ -1,0 +1,2 @@
+- Cette application nécessite une post-installation manuelle
+- Nous pourrions préconfigurer les notifications par courrier électronique avec le serveur de messagerie YunoHost en guise d'amélioration. Voir les commentaires dans le fichier pour essayer de le faire avec Curl et WebSockets ou Sqlite.

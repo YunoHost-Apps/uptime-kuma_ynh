@@ -1,30 +1,21 @@
 #!/bin/bash
 
-#=================================================
-# GENERIC START
-#=================================================
-# IMPORT GENERIC HELPERS
-#=================================================
-
 source _common.sh
 source /usr/share/yunohost/helpers
 
 #=================================================
 # INSTALL NODEJS
 #=================================================
-ynh_script_progression --message="Installing nodejs..." --weight=2
+ynh_script_progression "Installing nodejs..."
 
-ynh_install_nodejs --nodejs_version=$nodejs_version
+ynh_nodejs_install
 
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
-ynh_script_progression --message="Setting up source files..." --weight=1
+ynh_script_progression "Setting up source files..."
 
-# Download, check integrity, uncompress and patch the source from app.src
 ynh_setup_source --dest_dir="$install_dir"
-
-# Download, check integrity, uncompress and patch the source from dist.src
 ynh_setup_source --dest_dir="$install_dir/dist" --source_id="dist"
 
 chmod -R o-rwx "$install_dir"
@@ -33,40 +24,35 @@ chown -R $app:www-data "$install_dir"
 #=================================================
 # SYSTEM CONFIGURATION
 #=================================================
-ynh_script_progression --message="Adding system configurations related to $app..." --weight=1
+ynh_script_progression "Adding system configurations related to $app..."
 
-# Create a dedicated NGINX config
-ynh_add_nginx_config
+ynh_config_add_nginx
 
-# Create a dedicated systemd config
-ynh_add_systemd_config
+ynh_config_add_systemd
 
-# Use logrotate to manage application logfile(s)
-ynh_use_logrotate
+ynh_config_add_logrotate
 
 yunohost service add $app --description="Monitoring tool" --log="/var/log/$app/$app.log"
 
 #=================================================
 # SPECIFIC SETUP
 #=================================================
-ynh_script_progression --message="Installing $app dependencies..." --weight=7
+ynh_script_progression "Installing $app dependencies..."
 
 pushd "$install_dir"
-ynh_use_nodejs
-ynh_exec_warn_less ynh_exec_as $app $ynh_node_load_PATH $ynh_npm install --omit=dev
-ynh_exec_warn_less ynh_exec_as $app $ynh_node_load_PATH $ynh_npm run download-dist
+	ynh_hide_warnings ynh_exec_as_app npm install --omit=dev
+	ynh_hide_warnings ynh_exec_as_app npm run download-dist
 popd
 
 #=================================================
 # INTEGRATE SERVICE IN YUNOHOST
 #=================================================
-ynh_script_progression --message="Integrating service in YunoHost..." --weight=1
+ynh_script_progression "Integrating service in YunoHost..."
 
-# Start a systemd service
-ynh_systemd_action --service_name=$app --action="start" --log_path="/var/log/$app/$app.log"
+ynh_systemctl --service=$app --action="start"
 
 #=================================================
 # END OF SCRIPT
 #=================================================
 
-ynh_script_progression --message="Installation of $app completed" --last
+ynh_script_progression "Installation of $app completed"

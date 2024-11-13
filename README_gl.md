@@ -5,7 +5,7 @@ NON debe editarse manualmente.
 
 # Uptime Kuma para YunoHost
 
-[![Nivel de integración](https://dash.yunohost.org/integration/uptime-kuma.svg)](https://dash.yunohost.org/appci/app/uptime-kuma) ![Estado de funcionamento](https://ci-apps.yunohost.org/ci/badges/uptime-kuma.status.svg) ![Estado de mantemento](https://ci-apps.yunohost.org/ci/badges/uptime-kuma.maintain.svg)
+[![Nivel de integración](https://dash.yunohost.org/integration/uptime-kuma.svg)](https://ci-apps.yunohost.org/ci/apps/uptime-kuma/) ![Estado de funcionamento](https://ci-apps.yunohost.org/ci/badges/uptime-kuma.status.svg) ![Estado de mantemento](https://ci-apps.yunohost.org/ci/badges/uptime-kuma.maintain.svg)
 
 [![Instalar Uptime Kuma con YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=uptime-kuma)
 
@@ -29,7 +29,7 @@ Uptime Kuma is a self-hosted monitoring tool like "Uptime Robot".
 - Certificate Info
 
 
-**Versión proporcionada:** 1.23.13~ynh1
+**Versión proporcionada:** 1.23.15~ynh1
 
 **Demo:** <https://demo.uptime.kuma.pet>
 
