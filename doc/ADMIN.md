@@ -1,2 +1,2 @@
 - This app needs a manual post-install
-- We could pre-configure mail notifications with YunoHost mail server as an improvement. See comments in file to try to do it with Curl and WebSockets or Sqlite.
+- We could pre-configure mail notifications with YunoHost mail server as an improvement. See comments in file to try to do it with cURL and WebSockets or Sqlite.
