@@ -5,7 +5,9 @@ Ini TIDAK boleh diedit dengan tangan.
 
 # Uptime Kuma untuk YunoHost
 
-[![Tingkat integrasi](https://dash.yunohost.org/integration/uptime-kuma.svg)](https://ci-apps.yunohost.org/ci/apps/uptime-kuma/) ![Status kerja](https://ci-apps.yunohost.org/ci/badges/uptime-kuma.status.svg) ![Status pemeliharaan](https://ci-apps.yunohost.org/ci/badges/uptime-kuma.maintain.svg)
+[![Tingkat integrasi](https://apps.yunohost.org/badge/integration/uptime-kuma)](https://ci-apps.yunohost.org/ci/apps/uptime-kuma/)
+![Status kerja](https://apps.yunohost.org/badge/state/uptime-kuma)
+![Status pemeliharaan](https://apps.yunohost.org/badge/maintained/uptime-kuma)
 
 [![Pasang Uptime Kuma dengan YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=uptime-kuma)
 
@@ -29,7 +31,7 @@ Uptime Kuma is a self-hosted monitoring tool like "Uptime Robot".
 - Certificate Info
 
 
-**Versi terkirim:** 1.23.15~ynh1
+**Versi terkirim:** 1.23.16~ynh1
 
 **Demo:** <https://demo.uptime.kuma.pet>
 
