@@ -31,7 +31,7 @@ Uptime Kuma is a self-hosted monitoring tool like "Uptime Robot".
 - Certificate Info
 
 
-**Dostarczona wersja:** 1.23.16~ynh1
+**Dostarczona wersja:** 2.0.0~ynh1
 
 **Demo:** <https://demo.uptime.kuma.pet>
 
