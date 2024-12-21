@@ -5,7 +5,9 @@ Hij mag NIET handmatig aangepast worden.
 
 # Uptime Kuma voor Yunohost
 
-[![Integratieniveau](https://dash.yunohost.org/integration/uptime-kuma.svg)](https://ci-apps.yunohost.org/ci/apps/uptime-kuma/) ![Mate van functioneren](https://ci-apps.yunohost.org/ci/badges/uptime-kuma.status.svg) ![Onderhoudsstatus](https://ci-apps.yunohost.org/ci/badges/uptime-kuma.maintain.svg)
+[![Integratieniveau](https://apps.yunohost.org/badge/integration/uptime-kuma)](https://ci-apps.yunohost.org/ci/apps/uptime-kuma/)
+![Mate van functioneren](https://apps.yunohost.org/badge/state/uptime-kuma)
+![Onderhoudsstatus](https://apps.yunohost.org/badge/maintained/uptime-kuma)
 
 [![Uptime Kuma met Yunohost installeren](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=uptime-kuma)
 

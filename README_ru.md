@@ -5,7 +5,9 @@
 
 # Uptime Kuma для YunoHost
 
-[![Уровень интеграции](https://dash.yunohost.org/integration/uptime-kuma.svg)](https://ci-apps.yunohost.org/ci/apps/uptime-kuma/) ![Состояние работы](https://ci-apps.yunohost.org/ci/badges/uptime-kuma.status.svg) ![Состояние сопровождения](https://ci-apps.yunohost.org/ci/badges/uptime-kuma.maintain.svg)
+[![Уровень интеграции](https://apps.yunohost.org/badge/integration/uptime-kuma)](https://ci-apps.yunohost.org/ci/apps/uptime-kuma/)
+![Состояние работы](https://apps.yunohost.org/badge/state/uptime-kuma)
+![Состояние сопровождения](https://apps.yunohost.org/badge/maintained/uptime-kuma)
 
 [![Установите Uptime Kuma с YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=uptime-kuma)
 

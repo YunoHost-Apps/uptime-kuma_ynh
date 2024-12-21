@@ -5,7 +5,9 @@ EZ editatu eskuz.
 
 # Uptime Kuma YunoHost-erako
 
-[![Integrazio maila](https://dash.yunohost.org/integration/uptime-kuma.svg)](https://ci-apps.yunohost.org/ci/apps/uptime-kuma/) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/uptime-kuma.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/uptime-kuma.maintain.svg)
+[![Integrazio maila](https://apps.yunohost.org/badge/integration/uptime-kuma)](https://ci-apps.yunohost.org/ci/apps/uptime-kuma/)
+![Funtzionamendu egoera](https://apps.yunohost.org/badge/state/uptime-kuma)
+![Mantentze egoera](https://apps.yunohost.org/badge/maintained/uptime-kuma)
 
 [![Instalatu Uptime Kuma YunoHost-ekin](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=uptime-kuma)
 
