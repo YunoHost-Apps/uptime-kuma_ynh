@@ -5,7 +5,9 @@ Il NE doit PAS être modifié à la main.
 
 # Uptime Kuma pour YunoHost
 
-[![Niveau d’intégration](https://dash.yunohost.org/integration/uptime-kuma.svg)](https://ci-apps.yunohost.org/ci/apps/uptime-kuma/) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/uptime-kuma.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/uptime-kuma.maintain.svg)
+[![Niveau d’intégration](https://apps.yunohost.org/badge/integration/uptime-kuma)](https://ci-apps.yunohost.org/ci/apps/uptime-kuma/)
+![Statut du fonctionnement](https://apps.yunohost.org/badge/state/uptime-kuma)
+![Statut de maintenance](https://apps.yunohost.org/badge/maintained/uptime-kuma)
 
 [![Installer Uptime Kuma avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=uptime-kuma)
 
@@ -21,14 +23,14 @@ Uptime Kuma est un outil de surveillance auto-hébergé comme « Uptime Robot »
 ### Caractéristiques
 
 - Surveillance de la disponibilité pour HTTP(s) / TCP / Ping / DNS Record / Push.
-- Notifications via Telegram, Discord, Gotify, Slack, Pushover, Email (SMTP)...
+- Notifications via Telegram, Discord, Gotify, Slack, Pushover, E-mail (SMTP)...
 - intervalles de 20 secondes
 - Multi langues
 - Page d'état simple
 - Graphique Ping
 - Informations sur le certificat
 
-**Version incluse :** 1.23.15~ynh1
+**Version incluse :** 1.23.16~ynh1
 
 **Démo :** <https://demo.uptime.kuma.pet>
 
