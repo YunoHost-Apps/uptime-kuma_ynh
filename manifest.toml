@@ -44,7 +44,8 @@ ram.runtime = "50M"
         [resources.sources.dist]
         url = "https://github.com/louislam/uptime-kuma/releases/download/2.0.0-beta.3/dist.tar.gz"
         sha256 = "eb58b3a5ff1399a03c084505aa20745858eb6a43207f6779c55b874680a754a1"
-        autoupdate.strategy = "latest_github_release"
+        #TODO: reenable once 2.0 lands
+        #autoupdate.strategy = "latest_github_release"
         autoupdate.asset = "dist.tar.gz"
 
         [resources.sources.main]
