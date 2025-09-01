@@ -46,13 +46,13 @@ ram.runtime = "50M"
         sha256 = "eb58b3a5ff1399a03c084505aa20745858eb6a43207f6779c55b874680a754a1"
         #TODO: reenable once 2.0 lands
         #autoupdate.strategy = "latest_github_release"
-        autoupdate.asset = "dist.tar.gz"
+        #autoupdate.asset = "dist.tar.gz"
 
         [resources.sources.main]
         url = "https://github.com/louislam/uptime-kuma/archive/refs/tags/2.0.0-beta.3.tar.gz"
         sha256 = "1b7ef7f6b2bdcd0a313aa00c67521415a9910e0207322cd788db0617f71e9e26"
         #autoupdate.strategy = "latest_github_release"
-        autoupdate.asset = "tarball"
+        #autoupdate.asset = "tarball"
 
     [resources.ports]
 
