@@ -21,7 +21,7 @@ Monitoring tool like Uptime-Robot
 
 
 ## Screenshots
-![Screenshot of Uptime Kuma](./doc/screenshots/example.jpg)
+![Screenshot of Uptime Kuma](./doc/screenshots/screenshot.jpg)
 
 ## 📦 Developer info
 
