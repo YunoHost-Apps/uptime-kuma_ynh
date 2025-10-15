@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 source /usr/share/yunohost/helpers
 
 #=================================================
@@ -25,8 +24,6 @@ chown -R $app:www-data "$install_dir"
 # REAPPLY SYSTEM CONFIGURATIONS
 #=================================================
 ynh_script_progression "Upgrading system configurations related to $app..."
-
-#REMOVEME? ynh_nodejs_install
 
 ynh_config_add_nginx
 

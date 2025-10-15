@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 source /usr/share/yunohost/helpers
 
 #=================================================
@@ -15,8 +14,6 @@ fi
 ynh_config_remove_systemd
 
 ynh_config_remove_logrotate
-
-#REMOVEME? ynh_nodejs_remove
 
 ynh_config_remove_nginx
 
