@@ -41,7 +41,7 @@ popd
 #=================================================
 
 if [ $database != "none" ]; then
-    ynh_script_progression --message="Configuring database..."
+    ynh_script_progression "Configuring database..."
 
     if [ $database == "mariadb" ]; then
 	    db_name=$(ynh_sanitize_dbid --db_name=$app)
