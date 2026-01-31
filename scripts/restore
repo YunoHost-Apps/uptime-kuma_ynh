@@ -27,6 +27,15 @@ ynh_restore "/etc/logrotate.d/$app"
 yunohost service add $app --description="Monitoring tool" --log="/var/log/$app/$app.log"
 
 #=================================================
+# RESTORE THE MYSQL DATABASE
+#=================================================
+
+if [ $database == "mariadb" ]; then
+    ynh_mysql_create_db --db_user=$db_user --db_name=$db_name --db_pwd=$db_pwd
+    ynh_mysql_db_shell < ./db.sql
+fi
+
+#=================================================
 # RELOAD NGINX AND PHP-FPM OR THE APP SERVICE
 #=================================================
 ynh_script_progression "Reloading NGINX web server and $app's service..."
