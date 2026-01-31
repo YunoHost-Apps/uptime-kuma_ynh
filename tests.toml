@@ -10,4 +10,5 @@ test_format = 1.0
 
 [mysql_test]
 
+    ["install.subdir", "backup_restore", "upgrade" ]
     args.database = "mariadb"
