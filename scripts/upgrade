@@ -29,10 +29,12 @@ ynh_config_add_nginx
 
 ynh_config_add_systemd
 
-ynh_config_add_logrotate
-
 yunohost service add $app --description="Monitoring tool" --log="/var/log/$app/$app.log"
 
+ynh_config_add_logrotate
+
+#=================================================
+# SPECIFIC SETUP
 #=================================================
 ynh_script_progression "Upgrading $app dependencies..."
 
