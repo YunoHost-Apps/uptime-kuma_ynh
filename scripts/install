@@ -52,7 +52,6 @@ if [ $database != "none" ]; then
 		ynh_app_setting_set --key=db_pwd --value=$db_pwd
 
         ynh_mysql_create_db "$db_name" "$db_user" "$db_pwd"
-		ynh_app_setting_set "$app" mysqlpwd "$db_pwd"
 		ynh_config_add --template="mysql.env" --destination="$install_dir/.env"
 	elif [ $database == "sqlite" ]; then
 		ynh_config_add --template="sqlite.env" --destination="$install_dir/.env"
