@@ -31,7 +31,7 @@ yunohost service add $app --description="Monitoring tool" --log="/var/log/$app/$
 #=================================================
 
 if [ $database == "mariadb" ]; then
-    ynh_mysql_create_db --db_user=$db_user --db_name=$db_name --db_pwd=$db_pwd
+    ynh_mysql_create_db "$db_name" "$db_user" "$db_pwd"
     ynh_mysql_db_shell < ./db.sql
 fi
 
