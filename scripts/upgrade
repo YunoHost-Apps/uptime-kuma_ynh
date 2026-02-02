@@ -24,9 +24,6 @@ if [ -n "${database:-}" ]; then
 	elif [ $database == "sqlite" ]; then
 		ynh_config_add --template="sqlite.env" --destination="$install_dir/.env"
 	fi
-else
-	ynh_app_setting_set --key=database --value=sqlite
-	ynh_config_add --template="sqlite.env" --destination="$install_dir/.env"
 fi
 
 chmod -R o-rwx "$install_dir"
