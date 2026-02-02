@@ -11,6 +11,12 @@ ynh_print_info "Declaring files to be backed up..."
 ynh_backup "$install_dir"
 
 #=================================================
+# BACKUP THE DATA DIR
+#=================================================
+
+ynh_backup "$data_dir"
+
+#=================================================
 # SYSTEM CONFIGURATION
 #=================================================
 
