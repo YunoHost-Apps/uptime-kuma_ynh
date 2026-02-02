@@ -17,8 +17,15 @@ ynh_script_progression "Upgrading source files..."
 ynh_setup_source --dest_dir="$install_dir"
 ynh_setup_source --dest_dir="$install_dir/dist" --source_id="dist"
 
-chmod -R o-rwx "$install_dir"
-chown -R $app:www-data "$install_dir"
+#chmod -R o-rwx "$install_dir"
+#chown -R $app:www-data "$install_dir"
+
+#=================================================
+# APP INITIAL CONFIGURATION
+#=================================================
+ynh_script_progression "Adding $app's configuration files..."
+
+ynh_config_add --template=".env" --destination="$install_dir/.env"
 
 #=================================================
 # REAPPLY SYSTEM CONFIGURATIONS

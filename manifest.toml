@@ -68,5 +68,11 @@ ram.runtime = "50M"
 
     [resources.ports]
     
+    [resources.apt]
+    packages = "mariadb-server"
+
+    [resources.database]
+    type = "mysql"
+
     [resources.nodejs]
     version = "22"
