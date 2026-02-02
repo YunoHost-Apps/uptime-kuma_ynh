@@ -19,6 +19,7 @@ ynh_setup_source --dest_dir="$install_dir/dist" --source_id="dist"
 
 # If database is set, use respective .env file
 if [ -n "${database:-}" ]; then
+	ynh_script_progression "Upgrading DB $database..."
 	if [ $database == "mariadb" ]; then
 		ynh_config_add --template="mysql.env" --destination="$install_dir/.env"
 	elif [ $database == "sqlite" ]; then
