@@ -53,14 +53,12 @@ ram.runtime = "50M"
         autoupdate.strategy = "latest_github_release"
         autoupdate.asset = "tarball"
 
-    [resources.ports]
-
     [resources.system_user]
 
     [resources.install_dir]
 
     [resources.data_dir]
-    
+
     [resources.permissions]
     main.url = "/"
     api.url = "/api"
@@ -68,5 +66,7 @@ ram.runtime = "50M"
     api.show_tile = false
     api.protected = true
 
+    [resources.ports]
+    
     [resources.nodejs]
     version = "22"
