@@ -37,6 +37,31 @@ pushd "$install_dir"
 popd
 
 #=================================================
+# CONFIGURING DATABASE
+#=================================================
+
+if [ $database != "none" ]; then
+    ynh_script_progression "Configuring database..."
+
+    if [ $database == "mariadb" ]; then
+	    db_name=$(ynh_sanitize_dbid --db_name=$app)
+		db_user=$db_name
+		db_pwd=$(ynh_string_random --length=30)
+		ynh_app_setting_set --key=db_name --value=$db_name
+		ynh_app_setting_set --key=db_user --value=$db_user
+		ynh_app_setting_set --key=db_pwd --value=$db_pwd
+
+        ynh_mysql_create_db "$db_name" "$db_user" "$db_pwd"
+		ynh_config_add --template="mysql.env" --destination="$install_dir/.env"
+	elif [ $database == "sqlite" ]; then
+		ynh_config_add --template="sqlite.env" --destination="$install_dir/.env"
+	fi
+
+	chmod 400 "$install_dir/.env"
+	chown "$app:$app" "$install_dir/.env"
+fi
+
+#=================================================
 # INTEGRATE SERVICE IN YUNOHOST
 #=================================================
 ynh_script_progression "Integrating service in YunoHost..."
