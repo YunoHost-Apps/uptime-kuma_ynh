@@ -11,7 +11,7 @@ It shall NOT be edited by hand.
 Monitoring tool like Uptime-Robot
 
 [![🌐 Official app website](https://img.shields.io/badge/Official_app_website-darkgreen?style=for-the-badge)](https://uptime.kuma.pet/)
-[![App Demo](https://img.shields.io/badge/App_Demo-blue?style=for-the-badge)](https://demo.uptime.kuma.pet)
+[![App Demo](https://img.shields.io/badge/App_Demo-blue?style=for-the-badge)](https://demo.kuma.pet/start-demo)
 [![Version: 2.2.1~ynh1](https://img.shields.io/badge/Version-2.2.1~ynh1-rgb(18,138,11)?style=for-the-badge)](https://ci-apps.yunohost.org/ci/apps/uptime-kuma/)
 
 <div align="center">

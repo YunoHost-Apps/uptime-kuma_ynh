@@ -12,7 +12,7 @@ maintainers = ["ketsapiwiq"]
 [upstream]
 license = "MIT"
 website = "https://uptime.kuma.pet/"
-demo = "https://demo.uptime.kuma.pet"
+demo = "https://demo.kuma.pet/start-demo"
 userdoc = "https://github.com/louislam/uptime-kuma/wiki"
 code = "https://github.com/louislam/uptime-kuma"
 
