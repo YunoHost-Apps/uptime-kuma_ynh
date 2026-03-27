@@ -33,6 +33,13 @@ ram.runtime = "50M"
     [install.domain]
     type = "domain"
 
+    [install.database]
+    ask.en = "Which database do you want to use?"
+    ask.fr = "Quelle base de données voulez vous utiliser?"
+    type = "select"
+    choices = [ "sqlite", "mariadb" ]
+    default = "sqlite"
+
     [install.init_main_permission]
     help.en = "This app has a status page meant to be public and a login-protected admin interface. It should be safe to expose publicly."
     help.fr = "Cette app a une page destinée à être publique et une interface d'admin protégée par mot de passe. Elle peut être exposée publiquement sans problème."
@@ -65,6 +72,14 @@ ram.runtime = "50M"
     api.allowed = "visitors"
     api.show_tile = false
     api.protected = true
+
+    [resources.apt]
+    packages = "nginx"  # Kind of "dummy" value to be sure to have a non-empty dep list
+    packages_from_raw_bash = """
+        if [[ "$database" == "mariadb" ]]; then
+            echo "mariadb-server"
+        fi
+    """
 
     [resources.nodejs]
     version = "22"
