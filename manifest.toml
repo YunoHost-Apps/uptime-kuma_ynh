@@ -17,7 +17,7 @@ userdoc = "https://github.com/louislam/uptime-kuma/wiki"
 code = "https://github.com/louislam/uptime-kuma"
 
 [integration]
-yunohost = ">= 12.1.39"
+yunohost = ">= 12.1.40"
 helpers_version = "2.1"
 architectures = "all"
 multi_instance = true
@@ -67,4 +67,4 @@ ram.runtime = "50M"
     api.protected = true
 
     [resources.nodejs]
-    version = "22"
+    version = "24"
