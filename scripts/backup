@@ -23,6 +23,15 @@ ynh_backup "/etc/systemd/system/$app.service"
 ynh_backup "/var/log/$app/"
 
 #=================================================
+# BACKUP THE MYSQL DATABASE
+#=================================================
+
+if [ $database == "mariadb" ]; then
+    ynh_print_info "Backing up the database..."
+    ynh_mysql_dump_db > db.sql
+fi
+
+#=================================================
 # END OF SCRIPT
 #=================================================
 
